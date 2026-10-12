@@ -1,0 +1,34 @@
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: wheelsync
+      POSTGRES_PASSWORD: wheelsync
+      POSTGRES_DB: wheelsync
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U wheelsync"]
+      interval: 5s
+      retries: 10
+
+  api:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      # inside compose the database host is "db", not localhost
+      DATABASE_URL: postgresql+psycopg2://wheelsync:wheelsync@db:5432/wheelsync
+    ports:
+      - "8000:8000"
+    volumes:
+      - uploads:/srv/uploads
+
+volumes:
+  pgdata:
+  uploads:
