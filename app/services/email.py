@@ -21,9 +21,10 @@ class EmailDeliveryFailed(Exception):
 def _deliver_email(recipient: str, subject: str, text: str, html: str) -> None:
     settings = get_settings()
     smtp_configured = bool(settings.smtp_host and settings.smtp_from)
+    brevo_configured = bool(settings.brevo_api_key and settings.email_from)
     resend_configured = bool(settings.resend_api_key and settings.email_from)
-    if not smtp_configured and not resend_configured:
-        raise EmailNotConfigured("Email is not configured. Set SMTP_HOST and SMTP_FROM (or RESEND_API_KEY and EMAIL_FROM) on the API server.")
+    if not smtp_configured and not brevo_configured and not resend_configured:
+        raise EmailNotConfigured("Email is not configured. Set SMTP_HOST and SMTP_FROM (or BREVO_API_KEY or RESEND_API_KEY, plus EMAIL_FROM) on the API server.")
 
     if smtp_configured:
         message = EmailMessage()
@@ -47,6 +48,27 @@ def _deliver_email(recipient: str, subject: str, text: str, html: str) -> None:
                 client.send_message(message)
         except (OSError, smtplib.SMTPException) as exc:
             raise EmailDeliveryFailed(f"Could not send email through SMTP: {exc}") from exc
+        return
+
+    if brevo_configured:
+        sender_name, sender_address = parseaddr(settings.email_from)
+        try:
+            response = httpx.post(
+                "https://api.brevo.com/v3/smtp/email",
+                headers={"api-key": settings.brevo_api_key, "Content-Type": "application/json", "Accept": "application/json"},
+                json={
+                    "sender": {"name": sender_name or sender_address, "email": sender_address},
+                    "to": [{"email": recipient}],
+                    "subject": subject,
+                    "textContent": text,
+                    "htmlContent": _html_document(subject, html),
+                },
+                timeout=15,
+            )
+        except httpx.HTTPError as exc:
+            raise EmailDeliveryFailed(f"Could not reach the email provider: {exc}") from exc
+        if response.status_code >= 400:
+            raise EmailDeliveryFailed(f"Email provider rejected the message: {response.text}")
         return
 
     try:

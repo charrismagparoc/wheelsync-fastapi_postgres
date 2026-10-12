@@ -30,6 +30,8 @@ class Settings(BaseSettings):
     rental_address: str = "Zone 7, Kauswagan Highway, Cagayan de Oro City"
 
     resend_api_key: str | None = None
+    # Brevo (brevo.com) sends over HTTPS, so it works where SMTP ports are blocked (e.g. Render's free plan).
+    brevo_api_key: str | None = None
     email_from: str | None = None
     smtp_host: str | None = None
     smtp_port: int = 587
