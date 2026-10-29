@@ -1,0 +1,543 @@
+customer_id,vehicle_model,release_datetime,agreed_end_datetime,actual_return_datetime,service_type,daily_rate_php,final_amount,status,data_source,segment,customer_name,customer_email,customer_phone
+C0001,Vios,2025-10-07 08:07:00,2025-10-08 04:28:44,2025-10-08 04:00:44,self-drive,1710,1710,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Vios,2025-11-22 10:18:00,2025-11-23 20:26:12,2025-11-23 19:37:12,self-drive,1540,3080,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Montero,2025-12-02 09:11:00,2025-12-03 19:10:55,2025-12-03 19:10:55,self-drive,3630,7260,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Vios,2025-12-22 08:08:00,2025-12-24 23:38:37,2025-12-24 23:32:37,self-drive,1690,5070,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Vios,2026-01-05 15:33:00,2026-01-06 16:55:32,2026-01-06 19:28:32,self-drive,1760,1760,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Vios,2026-02-16 08:14:00,2026-02-17 13:10:55,2026-02-17 13:07:55,self-drive,1740,3480,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Vios,2026-04-09 12:39:00,2026-04-10 19:19:38,2026-04-10 18:55:38,self-drive,1720,3440,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Vios,2026-04-22 07:27:00,2026-04-24 12:01:43,2026-04-24 15:10:43,self-drive,1590,4770,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Vios,2026-05-05 07:37:00,2026-05-06 03:14:16,2026-05-07 03:35:16,self-drive,1790,1790,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Vios,2026-05-30 06:46:00,2026-06-01 21:33:55,2026-06-01 20:50:55,with driver,1640,7920,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Montero,2026-06-15 07:12:00,2026-06-17 12:46:51,2026-06-17 12:28:51,self-drive,3570,10710,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Vios,2026-07-08 07:37:00,2026-07-10 11:11:57,2026-07-10 13:46:57,self-drive,1600,4800,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Vios,2026-07-28 18:08:00,2026-07-29 16:24:54,2026-07-29 16:18:54,self-drive,1680,1680,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0001,Vios,2026-08-30 07:01:00,2026-09-01 08:33:56,2026-09-01 07:36:56,self-drive,1650,3300,completed,pardz_records,loyal,Jerome Andrada,jerome.andrada53@gmail.com,09515998250
+C0002,Innova,2025-12-31 12:15:00,2026-01-01 13:49:04,2026-01-01 16:45:04,self-drive,2760,2760,completed,pardz_records,loyal,Liza Tolentino,tolentino.liza@gmail.com,09120601044
+C0002,Vios,2026-01-31 06:53:00,2026-02-01 08:20:12,2026-02-01 07:49:12,self-drive,1530,1530,completed,pardz_records,loyal,Liza Tolentino,tolentino.liza@gmail.com,09120601044
+C0002,Vios,2026-02-19 06:44:00,2026-02-20 14:15:51,2026-02-20 14:00:51,self-drive,1550,3100,completed,pardz_records,loyal,Liza Tolentino,tolentino.liza@gmail.com,09120601044
+C0002,Vios,2026-03-15 06:10:00,2026-03-20 06:49:50,2026-03-20 06:14:50,self-drive,1790,8950,completed,pardz_records,loyal,Liza Tolentino,tolentino.liza@gmail.com,09120601044
+C0002,Vios,2026-04-13 08:30:00,2026-04-14 09:37:00,2026-04-14 09:29:00,self-drive,1540,1540,completed,pardz_records,loyal,Liza Tolentino,tolentino.liza@gmail.com,09120601044
+C0002,Montero,2026-04-24 07:30:00,2026-04-25 00:03:00,2026-04-24 23:22:00,self-drive,3450,3450,completed,pardz_records,loyal,Liza Tolentino,tolentino.liza@gmail.com,09120601044
+C0002,Vios,2026-05-12 09:07:00,2026-05-13 06:23:13,2026-05-13 05:28:13,self-drive,1790,1790,completed,pardz_records,loyal,Liza Tolentino,tolentino.liza@gmail.com,09120601044
+C0002,Vios,2026-06-13 12:17:00,2026-06-14 12:54:07,2026-06-14 11:59:07,self-drive,1540,1540,completed,pardz_records,loyal,Liza Tolentino,tolentino.liza@gmail.com,09120601044
+C0002,Vios,2026-07-11 06:25:00,2026-07-12 09:41:27,2026-07-12 08:44:27,self-drive,1510,3020,completed,pardz_records,loyal,Liza Tolentino,tolentino.liza@gmail.com,09120601044
+C0002,Vios,2026-07-29 18:06:00,2026-08-01 14:17:14,2026-08-01 13:28:14,self-drive,1760,5280,completed,pardz_records,loyal,Liza Tolentino,tolentino.liza@gmail.com,09120601044
+C0002,Vios,2026-08-11 07:36:00,2026-08-13 21:13:58,2026-08-13 20:49:58,with driver,1640,7920,completed,pardz_records,loyal,Liza Tolentino,tolentino.liza@gmail.com,09120601044
+C0003,Vios,2025-05-31 11:08:00,2025-06-02 21:18:57,2025-06-02 20:29:57,self-drive,1550,4650,completed,pardz_records,one_time,Ana Ocampo,ana_1985@gmail.com,09174082709
+C0004,Vios,2025-01-14 09:19:00,2025-01-15 15:42:33,2025-01-15 15:12:33,with driver,1570,5140,completed,pardz_records,one_time,Allan Mendoza,mendoza.allan@gmail.com,09452259401
+C0005,Montero,2025-12-30 09:55:00,2026-01-01 18:53:13,2026-01-01 18:48:13,self-drive,3660,10980,completed,pardz_records,one_time,Kimberly Panganiban,itskimberlyp@gmail.com,09202518761
+C0006,Montero,2025-03-27 12:47:00,2025-03-28 04:02:10,2025-03-28 03:06:10,with driver,3470,4470,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2025-04-25 18:33:00,2025-04-26 20:58:44,2025-04-26 20:24:44,with driver,3640,9280,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2025-04-30 18:55:00,2025-05-01 22:38:24,2025-05-02 01:45:24,with driver,3670,9340,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2025-05-29 06:20:00,2025-05-31 14:15:52,2025-05-31 17:08:52,with driver,3460,13380,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2025-06-18 10:56:00,2025-06-19 11:56:42,2025-06-19 11:30:42,self-drive,3710,3710,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Vios,2025-07-20 18:28:00,2025-07-23 02:08:12,2025-07-23 01:46:12,self-drive,1690,5070,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Vios,2025-07-28 10:07:00,2025-07-29 13:37:08,2025-07-29 16:12:08,with driver,1630,5260,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Vios,2025-08-17 08:18:00,2025-08-18 11:48:39,2025-08-19 12:43:39,with driver,1530,5060,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2025-08-29 18:59:00,2025-08-30 22:36:32,2025-08-31 07:15:32,with driver,3460,8920,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2025-10-24 10:46:00,2025-10-25 21:43:26,2025-10-25 21:32:26,with driver,3420,8840,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2026-01-02 09:36:00,2026-01-03 11:40:12,2026-01-03 10:52:12,with driver,3770,4770,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2026-02-06 10:46:00,2026-02-07 19:51:59,2026-02-07 21:32:59,with driver,3700,9400,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2026-03-12 15:37:00,2026-03-13 16:01:31,2026-03-13 15:10:31,with driver,3680,4680,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2026-04-03 12:58:00,2026-04-05 11:49:13,2026-04-05 11:13:13,self-drive,3680,7360,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2026-04-18 09:10:00,2026-04-22 15:11:45,2026-04-22 15:06:45,with driver,3650,23250,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2026-04-28 10:34:00,2026-04-29 15:44:13,2026-04-29 18:52:13,with driver,3780,9560,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2026-05-21 18:08:00,2026-05-22 19:49:33,2026-05-22 21:19:33,with driver,3520,4520,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0006,Montero,2026-07-02 18:25:00,2026-07-04 03:14:06,2026-07-04 05:50:06,with driver,3530,9060,completed,pardz_records,loyal,Ana Lim,analim@gmail.com,09176996189
+C0007,Vios,2025-09-24 15:38:00,2025-09-25 12:28:15,2025-09-25 11:49:15,self-drive,1690,1690,completed,pardz_records,one_time,Patricia Cruz,patricia.cruz@gmail.com,09483255170
+C0008,Vios,2025-11-23 06:18:00,2025-11-24 05:47:43,2025-11-24 05:03:43,self-drive,1680,1680,completed,pardz_records,occasional,Kristine Manalo,kristinemanalo1989@gmail.com,09660232407
+C0008,Vios,2026-02-14 07:07:00,2026-02-15 11:44:23,2026-02-15 11:23:23,self-drive,1710,3420,completed,pardz_records,occasional,Kristine Manalo,kristinemanalo1989@gmail.com,09660232407
+C0008,Vios,2026-04-30 07:23:00,2026-04-30 21:47:00,2026-04-30 21:09:00,self-drive,1550,1550,completed,pardz_records,occasional,Kristine Manalo,kristinemanalo1989@gmail.com,09660232407
+C0008,Vios,2026-06-13 09:50:00,2026-06-14 02:17:02,2026-06-14 01:18:02,self-drive,1620,1620,completed,pardz_records,occasional,Kristine Manalo,kristinemanalo1989@gmail.com,09660232407
+C0008,Vios,2026-07-24 07:04:00,2026-07-25 13:09:06,2026-07-25 12:24:06,self-drive,1770,3540,completed,pardz_records,occasional,Kristine Manalo,kristinemanalo1989@gmail.com,09660232407
+C0009,Vios,2025-05-29 06:14:00,2025-05-30 13:50:19,2025-05-30 13:00:19,self-drive,1520,3040,completed,pardz_records,one_time,Joshua Ocampo,joshuaocampo@gmail.com,09391928236
+C0010,Vios,2025-12-10 15:29:00,2025-12-11 19:06:58,2025-12-12 03:37:58,self-drive,1600,3200,completed,pardz_records,occasional,Joanna Garcia,jgarcia@gmail.com,09142445851
+C0010,Vios,2026-03-20 07:11:00,2026-03-23 05:23:48,2026-03-23 07:24:48,self-drive,1580,4740,completed,pardz_records,occasional,Joanna Garcia,jgarcia@gmail.com,09142445851
+C0011,Hilux,2026-02-08 12:43:00,2026-02-09 20:54:11,2026-02-09 20:28:11,self-drive,3290,6580,completed,pardz_records,occasional,Hazel Manalo,h.manalo@gmail.com,09971628226
+C0011,Vios,2026-07-31 12:44:00,2026-08-01 08:32:50,2026-08-01 13:52:50,with driver,1640,2640,completed,pardz_records,occasional,Hazel Manalo,h.manalo@gmail.com,09971628226
+C0012,Vios,2025-09-20 09:51:00,2025-09-21 13:48:47,2025-09-21 17:08:47,with driver,1770,5540,completed,pardz_records,loyal,Ana Del Rosario,delrosario.ana@gmail.com,09297657739
+C0012,Hilux,2025-11-14 10:11:00,2025-11-15 07:09:27,2025-11-15 07:04:27,with driver,3160,4160,completed,pardz_records,loyal,Ana Del Rosario,delrosario.ana@gmail.com,09297657739
+C0012,Vios,2025-12-01 12:08:00,2025-12-02 18:01:03,2025-12-02 17:27:03,with driver,1770,5540,completed,pardz_records,loyal,Ana Del Rosario,delrosario.ana@gmail.com,09297657739
+C0012,Vios,2026-01-12 06:29:00,2026-01-16 17:24:58,2026-01-16 18:32:58,with driver,1690,13450,completed,pardz_records,loyal,Ana Del Rosario,delrosario.ana@gmail.com,09297657739
+C0012,Vios,2026-01-18 12:20:00,2026-01-19 17:35:17,2026-01-19 17:10:17,with driver,1770,5540,completed,pardz_records,loyal,Ana Del Rosario,delrosario.ana@gmail.com,09297657739
+C0012,Vios,2026-01-29 09:14:00,2026-01-30 13:32:47,2026-01-30 13:13:47,with driver,1590,5180,completed,pardz_records,loyal,Ana Del Rosario,delrosario.ana@gmail.com,09297657739
+C0012,Vios,2026-02-06 10:14:00,2026-02-08 20:28:26,2026-02-08 20:09:26,with driver,1740,8220,completed,pardz_records,loyal,Ana Del Rosario,delrosario.ana@gmail.com,09297657739
+C0012,Vios,2026-02-21 18:47:00,2026-02-22 16:28:20,2026-02-22 16:02:20,with driver,1770,2770,completed,pardz_records,loyal,Ana Del Rosario,delrosario.ana@gmail.com,09297657739
+C0012,Vios,2026-04-02 06:47:00,2026-04-03 09:29:26,2026-04-03 12:40:26,with driver,1510,5020,completed,pardz_records,loyal,Ana Del Rosario,delrosario.ana@gmail.com,09297657739
+C0012,Vios,2026-04-19 23:57:00,2026-04-21 22:37:54,2026-04-21 23:43:54,with driver,1590,5180,completed,pardz_records,loyal,Ana Del Rosario,delrosario.ana@gmail.com,09297657739
+C0012,Vios,2026-05-08 10:03:00,2026-05-09 15:46:03,2026-05-09 18:52:03,with driver,1620,5240,completed,pardz_records,loyal,Ana Del Rosario,delrosario.ana@gmail.com,09297657739
+C0013,Montero,2025-01-02 08:50:00,2025-01-03 09:27:47,2025-01-03 09:12:47,self-drive,3490,3490,completed,pardz_records,occasional,Angelica Castro,angelica.castro85@gmail.com,09209113612
+C0014,Vios,2026-08-16 07:08:00,2026-08-17 06:35:36,2026-08-17 08:30:36,with driver,1570,2570,completed,pardz_records,one_time,Edgar Estrada,edgarestrada@gmail.com,09887660541
+C0015,Vios,2026-01-11 12:36:00,2026-01-12 04:16:51,2026-01-12 03:17:51,self-drive,1680,1680,completed,pardz_records,occasional,Mae Bautista,mbautista@gmail.com,09006265357
+C0015,Vios,2026-04-05 07:12:00,2026-04-06 07:47:58,2026-04-06 09:11:58,self-drive,1550,1550,completed,pardz_records,occasional,Mae Bautista,mbautista@gmail.com,09006265357
+C0016,Hilux,2026-03-28 06:00:00,2026-03-29 00:10:51,2026-03-29 00:10:51,self-drive,3350,3350,completed,pardz_records,occasional,Ronald Panganiban,r.panganiban@gmail.com,09975176530
+C0016,Hilux,2026-09-18 09:32:00,2026-09-20 08:32:38,2026-09-20 12:09:38,with driver,3330,8660,completed,pardz_records,occasional,Ronald Panganiban,r.panganiban@gmail.com,09975176530
+C0017,Hilux,2026-01-15 12:23:00,2026-01-16 21:54:28,2026-01-16 21:14:28,with driver,3210,8420,completed,pardz_records,one_time,Liza Bautista,bautistal38@gmail.com,09761849560
+C0018,Fortuner,2026-05-23 18:40:00,2026-05-24 23:56:11,2026-05-25 01:04:11,self-drive,3790,7580,completed,pardz_records,one_time,Rafael Cruz,rafael_cruz@gmail.com,09950843819
+C0019,Vios,2026-07-14 07:51:00,2026-07-15 11:26:41,2026-07-15 10:39:41,with driver,1610,5220,completed,pardz_records,occasional,Hazel Tomas,hazel.tomas@gmail.com,09718826375
+C0020,Vios,2026-07-20 10:11:00,2026-07-24 21:53:27,2026-07-24 21:31:27,self-drive,1600,8000,completed,pardz_records,occasional,Christian Soriano,christian_2002@gmail.com,09199131566
+C0021,Vios,2025-06-05 07:52:00,2025-06-06 19:23:49,2025-06-06 18:29:49,self-drive,1590,3180,completed,pardz_records,loyal,Camille Gomez,camille_gomez@gmail.com,09014097269
+C0021,Montero,2025-06-30 06:33:00,2025-07-01 13:26:53,2025-07-01 13:21:53,self-drive,3500,7000,completed,pardz_records,loyal,Camille Gomez,camille_gomez@gmail.com,09014097269
+C0021,Montero,2025-07-15 09:09:00,2025-07-16 12:20:50,2025-07-16 11:29:50,self-drive,3560,7120,completed,pardz_records,loyal,Camille Gomez,camille_gomez@gmail.com,09014097269
+C0021,Montero,2025-07-24 10:45:00,2025-07-25 11:29:39,2025-07-25 10:43:39,with driver,3440,4440,completed,pardz_records,loyal,Camille Gomez,camille_gomez@gmail.com,09014097269
+C0021,Montero,2025-08-10 09:15:00,2025-08-12 07:07:24,2025-08-12 06:17:24,self-drive,3680,7360,completed,pardz_records,loyal,Camille Gomez,camille_gomez@gmail.com,09014097269
+C0021,Montero,2025-09-10 18:51:00,2025-09-11 15:48:37,2025-09-11 14:56:37,self-drive,3460,3460,completed,pardz_records,loyal,Camille Gomez,camille_gomez@gmail.com,09014097269
+C0022,Vios,2026-07-20 18:15:00,2026-07-21 21:59:13,2026-07-21 21:58:13,self-drive,1640,3280,completed,pardz_records,loyal,Angelica Del Rosario,itsangelicad@gmail.com,09190225316
+C0022,Montero,2026-08-12 12:24:00,2026-08-13 12:10:50,2026-08-13 11:39:50,self-drive,3460,3460,completed,pardz_records,loyal,Angelica Del Rosario,itsangelicad@gmail.com,09190225316
+C0022,Vios,2026-09-04 09:55:00,2026-09-05 05:20:17,2026-09-05 05:00:17,self-drive,1740,1740,completed,pardz_records,loyal,Angelica Del Rosario,itsangelicad@gmail.com,09190225316
+C0022,Vios,2026-09-27 09:12:00,2026-09-29 21:16:54,2026-09-29 20:21:54,with driver,1580,7740,completed,pardz_records,loyal,Angelica Del Rosario,itsangelicad@gmail.com,09190225316
+C0023,Fortuner,2025-10-19 18:19:00,2025-10-20 22:32:28,2025-10-20 21:49:28,with driver,3980,9960,completed,pardz_records,one_time,Nicole Morales,moralesn10@gmail.com,09112253893
+C0024,Innova,2025-04-23 06:44:00,2025-04-25 22:48:16,2025-04-25 21:49:16,with driver,2550,10650,completed,pardz_records,one_time,Rose Flores,itsrosef@gmail.com,09905476658
+C0025,Vios,2025-09-14 07:01:00,2025-09-14 22:02:58,2025-09-14 21:43:58,with driver,1540,2540,completed,pardz_records,occasional,John Panganiban,johnpanganiban1985@gmail.com,09658861505
+C0025,Vios,2026-01-18 10:16:00,2026-01-19 16:21:50,2026-01-19 16:13:50,with driver,1710,5420,completed,pardz_records,occasional,John Panganiban,johnpanganiban1985@gmail.com,09658861505
+C0025,Vios,2026-04-14 07:57:00,2026-04-15 04:27:44,2026-04-15 03:51:44,self-drive,1620,1620,completed,pardz_records,occasional,John Panganiban,johnpanganiban1985@gmail.com,09658861505
+C0025,Vios,2026-06-27 09:41:00,2026-06-28 10:48:01,2026-06-28 10:47:01,with driver,1780,2780,completed,pardz_records,occasional,John Panganiban,johnpanganiban1985@gmail.com,09658861505
+C0026,Vios,2025-07-25 23:09:00,2025-07-27 02:34:40,2025-07-27 02:09:40,self-drive,1740,3480,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2025-09-03 06:16:00,2025-09-04 09:37:25,2025-09-04 08:44:25,self-drive,1670,3340,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2025-09-18 06:30:00,2025-09-21 00:27:07,2025-09-20 23:46:07,self-drive,1720,5160,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2025-10-05 10:58:00,2025-10-10 00:29:02,2025-10-10 00:10:02,self-drive,1610,8050,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2025-10-18 07:47:00,2025-10-19 07:18:28,2025-10-19 06:29:28,self-drive,1740,1740,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2025-10-28 19:29:00,2025-10-31 03:11:22,2025-10-31 02:18:22,self-drive,1660,4980,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2025-11-25 06:04:00,2025-11-26 04:40:29,2025-11-26 04:37:29,self-drive,1750,1750,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2025-12-03 11:10:00,2025-12-04 16:09:42,2025-12-04 16:01:42,self-drive,1530,3060,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2026-01-01 09:23:00,2026-01-02 09:36:17,2026-01-02 08:52:17,self-drive,1640,1640,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2026-01-29 07:22:00,2026-01-30 09:50:05,2026-01-30 09:37:05,self-drive,1550,3100,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2026-02-21 18:10:00,2026-02-22 20:09:25,2026-02-22 19:20:25,self-drive,1630,1630,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2026-03-12 23:23:00,2026-03-15 06:55:10,2026-03-15 06:03:10,self-drive,1700,5100,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Vios,2026-03-28 23:17:00,2026-03-31 15:53:51,2026-03-31 15:09:51,self-drive,1510,4530,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0026,Innova,2026-04-09 23:36:00,2026-04-14 07:41:46,2026-04-14 07:12:46,self-drive,2550,12750,completed,pardz_records,loyal,Ronald Estrada,ronalde@gmail.com,09030979892
+C0027,Vios,2025-11-29 08:12:00,2025-11-30 06:47:37,2025-11-30 15:40:37,self-drive,1780,1780,completed,pardz_records,one_time,Carlo Fernandez,itscarlof@gmail.com,09922429308
+C0028,Vios,2025-05-18 09:12:00,2025-05-19 09:44:41,2025-05-19 09:19:41,self-drive,1520,1520,completed,pardz_records,one_time,John Morales,john89@gmail.com,09854291955
+C0029,Innova,2025-06-18 07:31:00,2025-06-20 03:44:52,2025-06-20 02:45:52,with driver,2630,7260,completed,pardz_records,occasional,Joy Ocampo,joy.ocampo@gmail.com,09866556129
+C0029,Innova,2025-08-12 12:48:00,2025-08-13 06:55:25,2025-08-13 06:45:25,with driver,2550,3550,completed,pardz_records,occasional,Joy Ocampo,joy.ocampo@gmail.com,09866556129
+C0029,Innova,2025-09-27 09:23:00,2025-09-28 14:16:32,2025-09-28 13:41:32,self-drive,2750,5500,completed,pardz_records,occasional,Joy Ocampo,joy.ocampo@gmail.com,09866556129
+C0030,Vios,2025-08-17 12:34:00,2025-08-18 18:09:54,2025-08-18 17:42:54,self-drive,1610,3220,completed,pardz_records,occasional,Ronald Bautista,ronaldbautista1997@gmail.com,09397444123
+C0031,Montero,2025-04-16 12:15:00,2025-04-17 16:40:44,2025-04-17 15:51:44,self-drive,3780,7560,completed,pardz_records,one_time,Janine Ramos,janine_1993@gmail.com,09471230566
+C0032,Innova,2026-08-12 06:29:00,2026-08-14 12:07:47,2026-08-14 11:40:47,with driver,2550,10650,completed,pardz_records,occasional,Grace Javier,gracej@gmail.com,09391793946
+C0033,Innova,2025-06-22 15:22:00,2025-06-23 20:02:16,2025-06-23 19:56:16,with driver,2640,7280,completed,pardz_records,occasional,Allan Manalo,allan.manalo98@gmail.com,09489013394
+C0033,Vios,2025-08-20 12:25:00,2025-08-21 04:19:11,2025-08-21 09:41:11,self-drive,1760,1760,completed,pardz_records,occasional,Allan Manalo,allan.manalo98@gmail.com,09489013394
+C0034,Vios,2025-11-28 07:37:00,2025-11-30 08:54:57,2025-11-30 08:52:57,self-drive,1560,3120,completed,pardz_records,one_time,Jerome Valdez,jeromevaldez@gmail.com,09434589032
+C0035,Vios,2025-03-03 15:39:00,2025-03-04 20:24:27,2025-03-04 19:32:27,self-drive,1660,3320,completed,pardz_records,one_time,Mae Valdez,valdez.mae@gmail.com,09420848686
+C0036,Vios,2026-09-03 06:32:00,2026-09-04 09:37:18,2026-09-04 08:43:18,self-drive,1790,3580,completed,pardz_records,loyal,Kimberly Mercado,kimberlym@gmail.com,09600153090
+C0036,Vios,2026-09-18 06:18:00,2026-09-19 12:25:00,2026-09-19 12:14:00,with driver,1710,5420,completed,pardz_records,loyal,Kimberly Mercado,kimberlym@gmail.com,09600153090
+C0037,Vios,2026-09-14 09:27:00,2026-09-15 14:59:48,2026-09-15 14:36:48,self-drive,1730,3460,completed,pardz_records,loyal,Joanna Flores,joanna.flores23@gmail.com,09894307983
+C0037,Vios,2026-09-21 06:26:00,2026-09-23 21:06:27,2026-09-23 23:01:27,with driver,1570,7710,completed,pardz_records,loyal,Joanna Flores,joanna.flores23@gmail.com,09894307983
+C0038,Fortuner,2026-08-20 06:32:00,2026-08-21 02:45:44,2026-08-21 02:08:44,self-drive,3980,3980,completed,pardz_records,occasional,Arnel Rivera,arnel_1983@gmail.com,09421659379
+C0039,Montero,2025-02-27 10:32:00,2025-02-28 13:46:56,2025-02-28 13:36:56,with driver,3490,8980,completed,pardz_records,one_time,Kristine Del Rosario,kristine.delrosario@gmail.com,09824181984
+C0040,Vios,2025-04-18 06:03:00,2025-04-19 14:58:24,2025-04-19 14:09:24,with driver,1760,5520,completed,pardz_records,occasional,Nicole Tan,nicole.tan@gmail.com,09738214263
+C0040,Vios,2025-05-26 07:37:00,2025-05-29 01:43:17,2025-05-29 01:23:17,with driver,1740,8220,completed,pardz_records,occasional,Nicole Tan,nicole.tan@gmail.com,09738214263
+C0040,Vios,2025-06-15 11:30:00,2025-06-16 13:53:17,2025-06-16 13:09:17,with driver,1690,2690,completed,pardz_records,occasional,Nicole Tan,nicole.tan@gmail.com,09738214263
+C0040,Vios,2025-08-28 10:44:00,2025-08-30 20:21:15,2025-08-31 21:14:15,with driver,1590,7770,completed,pardz_records,occasional,Nicole Tan,nicole.tan@gmail.com,09738214263
+C0040,Vios,2026-01-28 07:31:00,2026-01-31 00:23:52,2026-01-30 23:31:52,with driver,1640,7920,completed,pardz_records,occasional,Nicole Tan,nicole.tan@gmail.com,09738214263
+C0040,Vios,2026-05-07 09:08:00,2026-05-08 12:17:46,2026-05-08 15:33:46,with driver,1730,5460,completed,pardz_records,occasional,Nicole Tan,nicole.tan@gmail.com,09738214263
+C0041,Vios,2026-06-04 19:16:00,2026-06-09 08:10:48,2026-06-09 08:03:48,self-drive,1730,8650,completed,pardz_records,occasional,Grace Gonzales,grace.gonzales@gmail.com,09081178086
+C0041,Vios,2026-07-25 10:55:00,2026-07-30 05:20:10,2026-07-30 04:51:10,with driver,1770,13850,completed,pardz_records,occasional,Grace Gonzales,grace.gonzales@gmail.com,09081178086
+C0042,Innova,2025-10-21 07:59:00,2025-10-22 07:52:24,2025-10-22 07:00:24,self-drive,2640,2640,completed,pardz_records,loyal,Noel Aguilar,noel02@gmail.com,09099089801
+C0042,Innova,2025-11-13 18:56:00,2025-11-14 23:49:28,2025-11-14 23:29:28,self-drive,2420,4840,completed,pardz_records,loyal,Noel Aguilar,noel02@gmail.com,09099089801
+C0042,Innova,2025-12-22 18:56:00,2025-12-24 05:17:51,2025-12-24 04:53:51,self-drive,2720,5440,completed,pardz_records,loyal,Noel Aguilar,noel02@gmail.com,09099089801
+C0043,Vios,2026-08-05 11:57:00,2026-08-06 13:15:17,2026-08-06 13:00:17,with driver,1730,2730,completed,pardz_records,one_time,Christian Magbanua,christian.magbanua@gmail.com,09733241784
+C0044,Innova,2026-06-16 07:05:00,2026-06-18 11:50:45,2026-06-18 11:27:45,self-drive,2560,7680,completed,pardz_records,occasional,Mark Torres,torresm30@gmail.com,09434059599
+C0045,Vios,2026-07-03 09:28:00,2026-07-05 07:24:41,2026-07-05 07:12:41,self-drive,1770,3540,completed,pardz_records,occasional,Rey Soriano,r.soriano@gmail.com,09024571926
+C0045,Vios,2026-08-18 12:48:00,2026-08-19 09:24:49,2026-08-19 09:09:49,with driver,1620,2620,completed,pardz_records,occasional,Rey Soriano,r.soriano@gmail.com,09024571926
+C0046,Montero,2026-06-24 18:12:00,2026-06-26 01:08:03,2026-06-26 00:13:03,self-drive,3750,7500,completed,pardz_records,one_time,Miguel Gonzales,miguelgonzales@gmail.com,09315250952
+C0047,Montero,2026-01-30 12:26:00,2026-01-31 15:15:42,2026-01-31 14:23:42,self-drive,3450,6900,completed,pardz_records,one_time,Camille Santiago,camillesantiago@gmail.com,09393595323
+C0048,Fortuner,2025-11-17 09:14:00,2025-11-18 18:23:15,2025-11-18 17:39:15,self-drive,3980,7960,completed,pardz_records,one_time,Joshua Cruz,j.cruz@gmail.com,09373165593
+C0049,Hilux,2026-08-08 08:53:00,2026-08-09 18:45:08,2026-08-09 18:27:08,self-drive,3330,6660,completed,pardz_records,occasional,Marlon Ocampo,marlon85@gmail.com,09254341798
+C0049,Hilux,2026-09-10 23:01:00,2026-09-12 02:41:05,2026-09-12 02:28:05,self-drive,3140,6280,completed,pardz_records,occasional,Marlon Ocampo,marlon85@gmail.com,09254341798
+C0050,Vios,2025-01-20 19:28:00,2025-01-22 00:02:39,2025-01-21 23:52:39,self-drive,1750,3500,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2025-03-06 07:19:00,2025-03-07 13:34:59,2025-03-07 19:15:59,self-drive,1710,3420,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2025-03-13 18:54:00,2025-03-14 21:59:50,2025-03-14 21:42:50,self-drive,1680,3360,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2025-03-30 18:37:00,2025-03-31 11:36:42,2025-03-31 11:28:42,self-drive,1630,1630,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2025-05-03 10:24:00,2025-05-04 12:57:55,2025-05-04 12:52:55,self-drive,1660,3320,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2025-08-06 08:45:00,2025-08-07 12:35:25,2025-08-07 12:07:25,self-drive,1680,3360,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2025-09-05 12:44:00,2025-09-06 15:29:07,2025-09-06 15:25:07,self-drive,1790,3580,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2025-09-23 12:27:00,2025-09-24 08:45:33,2025-09-24 09:55:33,self-drive,1720,1720,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2025-09-28 06:01:00,2025-09-30 13:52:38,2025-09-30 13:18:38,self-drive,1600,4800,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2025-12-13 09:38:00,2025-12-16 05:14:38,2025-12-16 04:50:38,self-drive,1750,5250,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2026-01-13 11:59:00,2026-01-14 18:06:24,2026-01-14 17:53:24,self-drive,1800,3600,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2026-02-05 08:59:00,2026-02-06 12:32:13,2026-02-06 12:01:13,self-drive,1750,3500,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Montero,2026-02-10 06:18:00,2026-02-11 13:26:38,2026-02-11 13:00:38,self-drive,3530,7060,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2026-03-06 18:32:00,2026-03-07 21:13:08,2026-03-07 20:40:08,self-drive,1600,3200,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2026-04-04 09:19:00,2026-04-05 09:06:23,2026-04-05 08:59:23,self-drive,1730,1730,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2026-04-21 12:33:00,2026-04-23 12:05:05,2026-04-23 15:06:05,self-drive,1520,3040,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2026-04-30 23:34:00,2026-05-02 10:02:41,2026-05-02 13:03:41,self-drive,1520,3040,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2026-05-08 09:48:00,2026-05-09 05:00:49,2026-05-09 13:53:49,self-drive,1560,1560,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2026-07-24 09:39:00,2026-07-26 12:37:13,2026-07-26 11:54:13,self-drive,1640,4920,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2026-08-21 07:21:00,2026-08-23 06:05:39,2026-08-23 05:52:39,self-drive,1690,3380,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0050,Vios,2026-09-08 06:36:00,2026-09-09 06:04:03,2026-09-09 05:18:03,self-drive,1680,1680,completed,pardz_records,loyal,Hazel Del Rosario,delrosario.hazel@gmail.com,09244180307
+C0051,Vios,2025-01-28 15:55:00,2025-01-29 23:23:49,2025-01-30 07:35:49,with driver,1790,5580,completed,pardz_records,one_time,Jerome Gonzales,jerome.gonzales@gmail.com,09308043283
+C0052,Vios,2026-09-11 18:44:00,2026-09-14 02:14:41,2026-09-14 02:10:41,self-drive,1590,4770,completed,pardz_records,loyal,Arnel Lopez,a.lopez@gmail.com,09151074372
+C0053,Vios,2026-04-13 18:22:00,2026-04-16 03:31:40,2026-04-16 02:40:40,self-drive,1800,5400,completed,pardz_records,loyal,Dennis Santiago,dennis.santiago@gmail.com,09936205057
+C0054,Vios,2025-02-26 18:17:00,2025-02-27 22:11:55,2025-02-27 21:51:55,with driver,1700,5400,completed,pardz_records,one_time,Mark Garcia,mark.garcia@gmail.com,09157952518
+C0055,Vios,2026-07-18 15:17:00,2026-07-19 17:12:48,2026-07-19 17:04:48,self-drive,1510,1510,completed,pardz_records,one_time,Bea Dizon,bea.dizon@gmail.com,09258687037
+C0056,Vios,2025-08-27 07:20:00,2025-08-28 10:55:52,2025-08-28 10:30:52,self-drive,1730,3460,completed,pardz_records,occasional,Arnel Galang,arnelg@gmail.com,09050386909
+C0056,Vios,2025-09-10 12:17:00,2025-09-11 21:05:02,2025-09-11 20:18:02,self-drive,1660,3320,completed,pardz_records,occasional,Arnel Galang,arnelg@gmail.com,09050386909
+C0056,Vios,2026-03-24 12:08:00,2026-03-25 23:41:15,2026-03-26 02:01:15,self-drive,1790,3580,completed,pardz_records,occasional,Arnel Galang,arnelg@gmail.com,09050386909
+C0057,Vios,2025-03-25 12:58:00,2025-03-26 16:50:36,2025-03-26 16:35:36,self-drive,1760,3520,completed,pardz_records,occasional,Mark Bautista,mark.bautista94@gmail.com,09953156150
+C0058,Vios,2025-12-05 18:21:00,2025-12-06 21:28:03,2025-12-06 20:37:03,self-drive,1650,3300,completed,pardz_records,occasional,Noel Sison,sison.noel@gmail.com,09204508362
+C0058,Fortuner,2026-01-28 15:07:00,2026-01-29 20:38:26,2026-01-29 20:24:26,self-drive,3880,7760,completed,pardz_records,occasional,Noel Sison,sison.noel@gmail.com,09204508362
+C0058,Vios,2026-03-28 09:42:00,2026-03-29 06:40:20,2026-03-29 05:41:20,self-drive,1550,1550,completed,pardz_records,occasional,Noel Sison,sison.noel@gmail.com,09204508362
+C0058,Vios,2026-07-30 09:36:00,2026-08-04 11:41:46,2026-08-04 11:41:46,self-drive,1570,7850,completed,pardz_records,occasional,Noel Sison,sison.noel@gmail.com,09204508362
+C0059,Hilux,2025-01-21 11:19:00,2025-01-25 13:04:34,2025-01-25 12:59:34,with driver,3200,16800,completed,pardz_records,one_time,Nicole Tolentino,n.tolentino@gmail.com,09525994241
+C0060,Vios,2025-07-20 12:51:00,2025-07-24 21:22:14,2025-07-24 21:17:14,self-drive,1580,7900,completed,pardz_records,occasional,Ronald Javier,rjavier@gmail.com,09494491032
+C0060,Vios,2025-10-17 12:23:00,2025-10-18 21:47:32,2025-10-18 21:22:32,self-drive,1650,3300,completed,pardz_records,occasional,Ronald Javier,rjavier@gmail.com,09494491032
+C0060,Vios,2026-01-10 10:25:00,2026-01-11 12:44:31,2026-01-11 12:29:31,self-drive,1620,1620,completed,pardz_records,occasional,Ronald Javier,rjavier@gmail.com,09494491032
+C0060,Innova,2026-04-03 08:49:00,2026-04-04 15:51:10,2026-04-04 15:36:10,self-drive,2610,5220,completed,pardz_records,occasional,Ronald Javier,rjavier@gmail.com,09494491032
+C0060,Vios,2026-08-15 15:10:00,2026-08-18 05:25:24,2026-08-18 04:36:24,self-drive,1720,5160,completed,pardz_records,occasional,Ronald Javier,rjavier@gmail.com,09494491032
+C0061,Vios,2026-01-16 09:07:00,2026-01-17 16:21:18,2026-01-17 15:25:18,self-drive,1720,3440,completed,pardz_records,one_time,Vincent Salazar,vincent98@gmail.com,09215743754
+C0062,Vios,2025-04-10 07:27:00,2025-04-12 08:02:29,2025-04-12 07:38:29,self-drive,1520,3040,completed,pardz_records,occasional,Joy Pascual,joy_2001@gmail.com,09002189730
+C0063,Montero,2026-02-21 09:52:00,2026-02-22 11:01:15,2026-02-22 10:53:15,self-drive,3420,3420,completed,pardz_records,one_time,Marlon Lopez,mlopez@gmail.com,09266896148
+C0064,Montero,2025-06-12 11:03:00,2025-06-14 18:09:28,2025-06-14 17:44:28,self-drive,3620,10860,completed,pardz_records,occasional,Maria Valdez,mariav@gmail.com,09363544417
+C0064,Vios,2025-06-27 08:07:00,2025-06-29 12:46:49,2025-06-29 12:01:49,self-drive,1730,5190,completed,pardz_records,occasional,Maria Valdez,mariav@gmail.com,09363544417
+C0064,Montero,2025-09-14 18:50:00,2025-09-15 17:40:01,2025-09-15 16:48:01,with driver,3660,4660,completed,pardz_records,occasional,Maria Valdez,mariav@gmail.com,09363544417
+C0064,Montero,2025-10-26 08:25:00,2025-10-27 10:01:13,2025-10-27 09:50:13,self-drive,3760,3760,completed,pardz_records,occasional,Maria Valdez,mariav@gmail.com,09363544417
+C0065,Vios,2025-05-08 08:10:00,2025-05-09 14:17:40,2025-05-09 19:38:40,with driver,1510,5020,completed,pardz_records,loyal,Paul Castillo,castillop40@gmail.com,09981395491
+C0065,Vios,2025-07-01 23:04:00,2025-07-02 22:59:18,2025-07-03 23:23:18,self-drive,1670,1670,completed,pardz_records,loyal,Paul Castillo,castillop40@gmail.com,09981395491
+C0065,Vios,2025-07-09 09:29:00,2025-07-10 15:08:35,2025-07-10 14:34:35,self-drive,1710,3420,completed,pardz_records,loyal,Paul Castillo,castillop40@gmail.com,09981395491
+C0065,Vios,2025-08-14 06:52:00,2025-08-15 13:57:03,2025-08-15 15:19:03,self-drive,1590,3180,completed,pardz_records,loyal,Paul Castillo,castillop40@gmail.com,09981395491
+C0065,Vios,2025-08-21 08:43:00,2025-08-22 13:43:23,2025-08-22 13:40:23,self-drive,1520,3040,completed,pardz_records,loyal,Paul Castillo,castillop40@gmail.com,09981395491
+C0065,Vios,2025-09-15 15:51:00,2025-09-17 21:02:03,2025-09-18 02:16:03,self-drive,1800,5400,completed,pardz_records,loyal,Paul Castillo,castillop40@gmail.com,09981395491
+C0065,Vios,2025-09-27 09:09:00,2025-09-28 04:34:49,2025-09-28 13:23:49,self-drive,1580,1580,completed,pardz_records,loyal,Paul Castillo,castillop40@gmail.com,09981395491
+C0065,Vios,2025-11-06 09:25:00,2025-11-07 12:12:21,2025-11-07 14:33:21,self-drive,1610,3220,completed,pardz_records,loyal,Paul Castillo,castillop40@gmail.com,09981395491
+C0065,Vios,2025-12-24 08:08:00,2025-12-25 16:41:59,2025-12-25 20:33:59,self-drive,1500,3000,completed,pardz_records,loyal,Paul Castillo,castillop40@gmail.com,09981395491
+C0066,Vios,2026-05-01 11:45:00,2026-05-02 14:40:53,2026-05-02 14:19:53,self-drive,1540,3080,completed,pardz_records,one_time,Janine Torres,janine_2003@gmail.com,09390088409
+C0067,Vios,2026-01-15 12:55:00,2026-01-16 17:38:28,2026-01-16 16:58:28,self-drive,1530,3060,completed,pardz_records,occasional,Grace Bautista,itsgraceb@gmail.com,09450315404
+C0068,Montero,2025-12-03 10:05:00,2025-12-05 14:35:11,2025-12-05 18:29:11,with driver,3730,14190,completed,pardz_records,one_time,Patricia Salazar,patricia.salazar@gmail.com,09109860410
+C0069,Vios,2026-01-09 10:34:00,2026-01-10 12:35:40,2026-01-10 12:33:40,self-drive,1720,1720,completed,pardz_records,occasional,Paolo Rivera,privera@gmail.com,09667109118
+C0069,Vios,2026-05-09 19:38:00,2026-05-12 13:09:08,2026-05-12 12:22:08,self-drive,1580,4740,completed,pardz_records,occasional,Paolo Rivera,privera@gmail.com,09667109118
+C0069,Vios,2026-05-29 10:31:00,2026-05-30 15:34:42,2026-05-30 14:42:42,self-drive,1720,3440,completed,pardz_records,occasional,Paolo Rivera,privera@gmail.com,09667109118
+C0070,Vios,2026-01-14 19:03:00,2026-01-16 01:30:05,2026-01-16 00:35:05,self-drive,1750,3500,completed,pardz_records,loyal,Liza Domingo,liza_domingo@gmail.com,09219824800
+C0070,Vios,2026-01-30 07:29:00,2026-02-01 23:12:39,2026-02-01 23:10:39,self-drive,1780,5340,completed,pardz_records,loyal,Liza Domingo,liza_domingo@gmail.com,09219824800
+C0070,Vios,2026-02-04 18:56:00,2026-02-05 22:30:30,2026-02-05 21:59:30,self-drive,1530,3060,completed,pardz_records,loyal,Liza Domingo,liza_domingo@gmail.com,09219824800
+C0070,Vios,2026-02-25 07:13:00,2026-03-01 12:13:45,2026-03-01 11:23:45,self-drive,1550,7750,completed,pardz_records,loyal,Liza Domingo,liza_domingo@gmail.com,09219824800
+C0070,Vios,2026-03-16 09:33:00,2026-03-17 18:18:09,2026-03-17 17:56:09,with driver,1770,5540,completed,pardz_records,loyal,Liza Domingo,liza_domingo@gmail.com,09219824800
+C0070,Vios,2026-05-07 23:49:00,2026-05-10 17:15:50,2026-05-10 16:38:50,self-drive,1790,5370,completed,pardz_records,loyal,Liza Domingo,liza_domingo@gmail.com,09219824800
+C0070,Vios,2026-05-24 12:35:00,2026-05-26 12:51:27,2026-05-26 16:37:27,self-drive,1600,3200,completed,pardz_records,loyal,Liza Domingo,liza_domingo@gmail.com,09219824800
+C0070,Vios,2026-08-05 09:14:00,2026-08-07 09:28:59,2026-08-07 08:57:59,self-drive,1590,3180,completed,pardz_records,loyal,Liza Domingo,liza_domingo@gmail.com,09219824800
+C0070,Vios,2026-09-23 15:32:00,2026-09-26 06:40:35,2026-09-26 06:11:35,self-drive,1510,4530,completed,pardz_records,loyal,Liza Domingo,liza_domingo@gmail.com,09219824800
+C0071,Vios,2025-10-23 07:36:00,2025-10-27 09:47:32,2025-10-27 13:10:32,with driver,1730,10920,completed,pardz_records,one_time,Grace Garcia,grace_garcia@gmail.com,09132522173
+C0072,Fortuner,2025-12-14 15:57:00,2025-12-15 21:36:30,2025-12-16 03:00:30,self-drive,3850,7700,completed,pardz_records,loyal,Miguel Aguilar,miguel.aguilar77@gmail.com,09012390460
+C0072,Vios,2026-01-05 09:13:00,2026-01-06 15:50:19,2026-01-06 15:11:19,self-drive,1580,3160,completed,pardz_records,loyal,Miguel Aguilar,miguel.aguilar77@gmail.com,09012390460
+C0072,Innova,2026-01-28 18:29:00,2026-01-31 15:39:51,2026-01-31 15:28:51,with driver,2490,10470,completed,pardz_records,loyal,Miguel Aguilar,miguel.aguilar77@gmail.com,09012390460
+C0072,Fortuner,2026-04-13 18:55:00,2026-04-14 10:50:20,2026-04-14 13:24:20,self-drive,3630,3630,completed,pardz_records,loyal,Miguel Aguilar,miguel.aguilar77@gmail.com,09012390460
+C0072,Fortuner,2026-05-08 18:29:00,2026-05-10 02:01:59,2026-05-10 04:54:59,self-drive,3930,7860,completed,pardz_records,loyal,Miguel Aguilar,miguel.aguilar77@gmail.com,09012390460
+C0072,Fortuner,2026-06-27 09:11:00,2026-06-29 17:04:55,2026-06-30 01:46:55,with driver,3890,14670,completed,pardz_records,loyal,Miguel Aguilar,miguel.aguilar77@gmail.com,09012390460
+C0072,Fortuner,2026-08-18 23:47:00,2026-08-20 04:41:04,2026-08-20 04:02:04,self-drive,3900,7800,completed,pardz_records,loyal,Miguel Aguilar,miguel.aguilar77@gmail.com,09012390460
+C0072,Fortuner,2026-09-18 10:27:00,2026-09-19 02:15:40,2026-09-19 04:10:40,self-drive,3760,3760,completed,pardz_records,loyal,Miguel Aguilar,miguel.aguilar77@gmail.com,09012390460
+C0073,Innova,2025-06-06 07:44:00,2025-06-07 12:20:13,2025-06-07 12:00:13,self-drive,2510,5020,completed,pardz_records,occasional,Liza Morales,lizamorales@gmail.com,09728730540
+C0073,Innova,2025-07-13 07:44:00,2025-07-18 02:55:07,2025-07-18 02:41:07,with driver,2550,17750,completed,pardz_records,occasional,Liza Morales,lizamorales@gmail.com,09728730540
+C0073,Vios,2025-11-20 10:52:00,2025-11-23 05:26:55,2025-11-23 04:27:55,self-drive,1760,5280,completed,pardz_records,occasional,Liza Morales,lizamorales@gmail.com,09728730540
+C0073,Vios,2025-12-09 10:41:00,2025-12-10 07:54:07,2025-12-10 07:23:07,with driver,1570,2570,completed,pardz_records,occasional,Liza Morales,lizamorales@gmail.com,09728730540
+C0074,Vios,2026-02-14 07:30:00,2026-02-15 06:10:52,2026-02-15 05:11:52,self-drive,1610,1610,completed,pardz_records,one_time,Bea Tomas,beat@gmail.com,09241554581
+C0075,Vios,2025-04-17 10:34:00,2025-04-18 16:45:05,2025-04-18 21:50:05,self-drive,1560,3120,completed,pardz_records,occasional,Trisha Morales,trisha_1991@gmail.com,09647859525
+C0075,Innova,2025-06-14 07:11:00,2025-06-15 11:20:18,2025-06-15 10:51:18,self-drive,2750,5500,completed,pardz_records,occasional,Trisha Morales,trisha_1991@gmail.com,09647859525
+C0075,Vios,2025-08-12 09:47:00,2025-08-13 02:47:52,2025-08-13 01:55:52,self-drive,1780,1780,completed,pardz_records,occasional,Trisha Morales,trisha_1991@gmail.com,09647859525
+C0075,Vios,2025-10-28 18:06:00,2025-10-29 13:38:25,2025-10-29 13:20:25,self-drive,1750,1750,completed,pardz_records,occasional,Trisha Morales,trisha_1991@gmail.com,09647859525
+C0076,Montero,2025-04-14 06:59:00,2025-04-15 15:22:32,2025-04-15 14:32:32,self-drive,3710,7420,completed,pardz_records,loyal,Bea Soriano,beas@gmail.com,09506227615
+C0076,Montero,2025-05-09 11:59:00,2025-05-10 11:46:54,2025-05-10 11:17:54,self-drive,3530,3530,completed,pardz_records,loyal,Bea Soriano,beas@gmail.com,09506227615
+C0076,Vios,2025-06-02 15:43:00,2025-06-03 20:54:04,2025-06-03 20:43:04,self-drive,1510,3020,completed,pardz_records,loyal,Bea Soriano,beas@gmail.com,09506227615
+C0076,Vios,2025-06-26 08:33:00,2025-06-27 10:54:06,2025-06-27 10:38:06,self-drive,1520,1520,completed,pardz_records,loyal,Bea Soriano,beas@gmail.com,09506227615
+C0076,Montero,2025-07-24 12:57:00,2025-07-25 18:25:10,2025-07-25 17:27:10,self-drive,3690,7380,completed,pardz_records,loyal,Bea Soriano,beas@gmail.com,09506227615
+C0076,Montero,2025-09-11 18:13:00,2025-09-13 00:31:06,2025-09-13 00:04:06,self-drive,3660,7320,completed,pardz_records,loyal,Bea Soriano,beas@gmail.com,09506227615
+C0076,Montero,2025-10-10 08:16:00,2025-10-11 07:09:30,2025-10-11 06:47:30,self-drive,3500,3500,completed,pardz_records,loyal,Bea Soriano,beas@gmail.com,09506227615
+C0076,Vios,2025-10-16 07:12:00,2025-10-20 14:33:04,2025-10-20 13:58:04,self-drive,1630,8150,completed,pardz_records,loyal,Bea Soriano,beas@gmail.com,09506227615
+C0077,Vios,2025-07-24 15:25:00,2025-07-25 20:52:11,2025-07-25 20:29:11,self-drive,1790,3580,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2025-08-07 18:03:00,2025-08-08 23:00:58,2025-08-08 22:05:58,self-drive,1700,3400,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2025-09-27 10:27:00,2025-10-01 18:06:47,2025-10-01 17:57:47,self-drive,1800,9000,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2025-10-14 15:00:00,2025-10-15 22:52:40,2025-10-15 22:43:40,self-drive,1680,3360,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2025-11-05 08:21:00,2025-11-10 01:27:22,2025-11-10 00:46:22,with driver,1700,13500,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2025-11-21 07:28:00,2025-11-23 06:43:22,2025-11-23 06:24:22,with driver,1570,5140,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-01-07 18:48:00,2026-01-08 21:10:34,2026-01-08 21:00:34,self-drive,1790,1790,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-01-19 18:52:00,2026-01-20 12:11:27,2026-01-20 12:02:27,self-drive,1550,1550,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-02-16 12:00:00,2026-02-21 13:43:41,2026-02-21 13:29:41,self-drive,1580,7900,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-02-21 23:32:00,2026-02-26 08:15:26,2026-02-26 07:56:26,self-drive,1700,8500,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-03-02 06:07:00,2026-03-04 21:47:22,2026-03-04 20:52:22,self-drive,1710,5130,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-03-22 18:52:00,2026-03-24 17:56:18,2026-03-24 17:20:18,self-drive,1570,3140,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Innova,2026-04-09 08:03:00,2026-04-10 09:35:20,2026-04-10 09:03:20,self-drive,2620,2620,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-04-26 10:33:00,2026-04-27 14:12:29,2026-04-27 13:44:29,self-drive,1680,3360,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-06-08 08:14:00,2026-06-10 17:22:24,2026-06-10 16:38:24,self-drive,1520,4560,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-07-22 07:45:00,2026-07-25 05:22:17,2026-07-25 05:05:17,self-drive,1710,5130,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-08-22 07:56:00,2026-08-24 18:21:04,2026-08-24 18:16:04,self-drive,1640,4920,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-09-03 10:34:00,2026-09-05 07:58:35,2026-09-05 07:40:35,self-drive,1740,3480,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0077,Vios,2026-09-27 09:03:00,2026-10-01 16:20:06,2026-10-01 16:05:06,self-drive,1560,7800,completed,pardz_records,loyal,Paul Javier,paul.javier@gmail.com,09057174334
+C0078,Vios,2025-08-30 12:16:00,2025-09-02 00:24:24,2025-09-01 23:49:24,self-drive,1620,4860,completed,pardz_records,occasional,Ramon Castro,rcastro@gmail.com,09323884174
+C0078,Montero,2025-11-23 18:10:00,2025-11-25 19:18:17,2025-11-26 20:01:17,with driver,3760,9520,completed,pardz_records,occasional,Ramon Castro,rcastro@gmail.com,09323884174
+C0078,Vios,2026-01-05 18:20:00,2026-01-06 21:41:26,2026-01-06 21:05:26,self-drive,1700,3400,completed,pardz_records,occasional,Ramon Castro,rcastro@gmail.com,09323884174
+C0078,Vios,2026-02-24 07:46:00,2026-02-25 12:58:31,2026-02-25 12:13:31,self-drive,1780,3560,completed,pardz_records,occasional,Ramon Castro,rcastro@gmail.com,09323884174
+C0078,Vios,2026-05-09 09:52:00,2026-05-11 15:52:54,2026-05-11 14:58:54,self-drive,1530,4590,completed,pardz_records,occasional,Ramon Castro,rcastro@gmail.com,09323884174
+C0079,Vios,2025-06-14 06:38:00,2025-06-15 11:45:00,2025-06-15 11:34:00,self-drive,1700,3400,completed,pardz_records,occasional,Camille Garcia,camille87@gmail.com,09271778483
+C0080,Vios,2026-02-07 10:11:00,2026-02-08 08:13:15,2026-02-08 08:02:15,with driver,1630,2630,completed,pardz_records,occasional,Andrea Andrada,itsandreaa@gmail.com,09776525140
+C0081,Vios,2025-03-04 18:10:00,2025-03-05 17:40:30,2025-03-05 16:41:30,self-drive,1710,1710,completed,pardz_records,loyal,Rafael Galang,rgalang@gmail.com,09144073466
+C0082,Vios,2025-04-28 07:54:00,2025-04-29 13:18:09,2025-04-29 13:00:09,with driver,1680,5360,completed,pardz_records,loyal,Rafael Santos,rsantos@gmail.com,09460743981
+C0083,Innova,2025-03-03 06:21:00,2025-03-05 11:00:29,2025-03-05 11:00:29,self-drive,2470,7410,completed,pardz_records,occasional,Grace Panganiban,grace_1990@gmail.com,09917519072
+C0084,Vios,2025-02-21 18:01:00,2025-02-24 09:59:45,2025-02-24 09:26:45,self-drive,1530,4590,completed,pardz_records,one_time,Andrea Aquino,andreaaquino@gmail.com,09593011792
+C0085,Fortuner,2026-08-17 10:25:00,2026-08-18 10:13:24,2026-08-18 11:13:24,self-drive,3920,3920,completed,pardz_records,one_time,Christian Santos,christian.santos@gmail.com,09923780035
+C0086,Vios,2025-04-04 06:06:00,2025-04-06 03:00:28,2025-04-06 02:29:28,with driver,1590,5180,completed,pardz_records,occasional,Camille Soriano,csoriano@gmail.com,09993080438
+C0086,Vios,2025-05-17 06:21:00,2025-05-19 16:01:16,2025-05-19 15:42:16,self-drive,1670,5010,completed,pardz_records,occasional,Camille Soriano,csoriano@gmail.com,09993080438
+C0086,Vios,2025-08-17 07:20:00,2025-08-20 04:48:06,2025-08-20 04:00:06,self-drive,1650,4950,completed,pardz_records,occasional,Camille Soriano,csoriano@gmail.com,09993080438
+C0086,Vios,2025-11-25 07:02:00,2025-11-27 16:26:11,2025-11-27 15:38:11,self-drive,1520,4560,completed,pardz_records,occasional,Camille Soriano,csoriano@gmail.com,09993080438
+C0086,Vios,2026-02-05 18:41:00,2026-02-08 09:54:43,2026-02-08 09:50:43,self-drive,1730,5190,completed,pardz_records,occasional,Camille Soriano,csoriano@gmail.com,09993080438
+C0087,Fortuner,2025-03-31 12:32:00,2025-04-01 18:41:43,2025-04-02 00:17:43,with driver,3720,9440,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2025-04-09 07:00:00,2025-04-10 12:15:22,2025-04-10 11:49:22,with driver,3760,9520,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2025-05-28 10:50:00,2025-05-29 01:57:58,2025-05-29 01:27:58,with driver,3700,4700,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2025-06-14 09:22:00,2025-06-16 11:25:47,2025-06-16 11:04:47,with driver,3740,9480,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2025-07-05 06:49:00,2025-07-09 10:41:16,2025-07-09 10:32:16,with driver,3840,24200,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2025-08-08 12:46:00,2025-08-12 14:43:58,2025-08-12 16:06:58,with driver,3740,18960,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2025-09-12 15:33:00,2025-09-13 08:29:00,2025-09-13 08:01:00,with driver,3830,4830,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2025-10-31 10:35:00,2025-11-02 10:17:15,2025-11-02 09:59:15,with driver,3780,9560,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2025-11-27 08:53:00,2025-11-28 12:51:28,2025-11-28 15:53:28,with driver,3970,9940,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Vios,2026-01-06 12:27:00,2026-01-09 00:43:36,2026-01-08 23:46:36,with driver,1710,8130,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2026-02-24 12:32:00,2026-02-25 15:58:00,2026-02-25 15:02:00,with driver,3990,9980,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2026-03-05 18:01:00,2026-03-08 13:22:25,2026-03-08 15:06:25,with driver,3630,13890,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Vios,2026-06-01 12:50:00,2026-06-02 17:45:16,2026-06-02 17:14:16,with driver,1650,5300,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2026-08-01 06:06:00,2026-08-02 11:02:17,2026-08-02 10:23:17,with driver,3690,9380,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Vios,2026-08-07 09:37:00,2026-08-08 09:23:20,2026-08-08 08:36:20,with driver,1620,2620,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Innova,2026-09-07 11:09:00,2026-09-11 14:33:31,2026-09-11 14:02:31,with driver,2620,18100,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0087,Fortuner,2026-09-20 12:59:00,2026-09-21 12:34:14,2026-09-21 12:20:14,with driver,3600,4600,completed,pardz_records,loyal,Allan Fernandez,a.fernandez@gmail.com,09177249621
+C0088,Montero,2025-06-18 23:49:00,2025-06-20 02:51:06,2025-06-20 04:32:06,with driver,3760,9520,completed,pardz_records,occasional,Janine Del Rosario,janinedelrosario@gmail.com,09485855441
+C0089,Montero,2026-05-20 10:47:00,2026-05-21 12:08:29,2026-05-22 12:45:29,self-drive,3620,3620,completed,pardz_records,one_time,Jerome Tomas,jerome.tomas@gmail.com,09245409481
+C0090,Montero,2025-12-19 12:00:00,2025-12-20 16:35:35,2025-12-20 22:26:35,self-drive,3740,7480,completed,pardz_records,occasional,Arnel Lim,lim.arnel@gmail.com,09770232804
+C0090,Vios,2026-01-03 12:24:00,2026-01-04 12:51:15,2026-01-04 12:17:15,self-drive,1740,1740,completed,pardz_records,occasional,Arnel Lim,lim.arnel@gmail.com,09770232804
+C0090,Hilux,2026-04-14 18:40:00,2026-04-15 23:55:14,2026-04-15 23:39:14,with driver,3300,8600,completed,pardz_records,occasional,Arnel Lim,lim.arnel@gmail.com,09770232804
+C0090,Vios,2026-05-30 12:36:00,2026-05-31 19:30:08,2026-05-31 19:20:08,with driver,1530,5060,completed,pardz_records,occasional,Arnel Lim,lim.arnel@gmail.com,09770232804
+C0090,Vios,2026-06-21 18:22:00,2026-06-23 01:37:01,2026-06-23 03:07:01,self-drive,1500,3000,completed,pardz_records,occasional,Arnel Lim,lim.arnel@gmail.com,09770232804
+C0091,Vios,2025-04-15 12:53:00,2025-04-16 14:06:03,2025-04-16 13:53:03,with driver,1530,2530,completed,pardz_records,occasional,Janine Tolentino,janinet@gmail.com,09892105971
+C0092,Innova,2026-07-05 08:28:00,2026-07-06 05:15:14,2026-07-06 04:25:14,self-drive,2580,2580,completed,pardz_records,loyal,Rose Bautista,roseb@gmail.com,09216449605
+C0092,Vios,2026-07-12 06:19:00,2026-07-13 05:50:07,2026-07-13 05:27:07,self-drive,1740,1740,completed,pardz_records,loyal,Rose Bautista,roseb@gmail.com,09216449605
+C0092,Innova,2026-08-31 18:24:00,2026-09-01 18:25:27,2026-09-01 17:42:27,self-drive,2710,2710,completed,pardz_records,loyal,Rose Bautista,roseb@gmail.com,09216449605
+C0092,Innova,2026-09-09 09:17:00,2026-09-10 10:29:18,2026-09-10 09:41:18,self-drive,2800,2800,completed,pardz_records,loyal,Rose Bautista,roseb@gmail.com,09216449605
+C0092,Innova,2026-09-14 15:52:00,2026-09-17 02:13:04,2026-09-17 01:21:04,self-drive,2600,7800,completed,pardz_records,loyal,Rose Bautista,roseb@gmail.com,09216449605
+C0093,Vios,2026-08-19 11:39:00,2026-08-20 16:56:39,2026-08-20 16:37:39,with driver,1610,5220,completed,pardz_records,one_time,Diane Javier,dianejavier2003@gmail.com,09668036872
+C0094,Innova,2025-07-24 09:40:00,2025-07-29 10:36:59,2025-07-29 10:03:59,self-drive,2440,12200,completed,pardz_records,one_time,Hazel Domingo,hazel93@gmail.com,09662311304
+C0095,Vios,2026-01-17 07:45:00,2026-01-19 21:37:04,2026-01-19 21:16:04,self-drive,1590,4770,completed,pardz_records,loyal,Liza Mendoza,mendozal76@gmail.com,09433991634
+C0095,Vios,2026-02-01 12:12:00,2026-02-02 16:44:33,2026-02-02 16:25:33,with driver,1520,5040,completed,pardz_records,loyal,Liza Mendoza,mendozal76@gmail.com,09433991634
+C0095,Vios,2026-03-22 06:12:00,2026-03-22 23:58:22,2026-03-22 23:04:22,self-drive,1560,1560,completed,pardz_records,loyal,Liza Mendoza,mendozal76@gmail.com,09433991634
+C0096,Vios,2025-08-31 23:47:00,2025-09-02 06:10:44,2025-09-02 05:18:44,self-drive,1720,3440,completed,pardz_records,one_time,Adrian Estrada,aestrada@gmail.com,09387383590
+C0097,Fortuner,2025-09-29 18:36:00,2025-10-03 20:43:45,2025-10-03 20:21:45,self-drive,3900,15600,completed,pardz_records,one_time,Carlo Ocampo,ocampo.carlo@gmail.com,09966096442
+C0098,Innova,2025-07-10 10:09:00,2025-07-11 08:52:13,2025-07-11 08:33:13,self-drive,2800,2800,completed,pardz_records,occasional,Patricia Aguilar,patriciaaguilar1975@gmail.com,09310292349
+C0099,Vios,2026-06-27 18:14:00,2026-06-28 17:24:56,2026-06-28 16:42:56,self-drive,1550,1550,completed,pardz_records,loyal,Miguel Torres,miguel.torres@gmail.com,09556597514
+C0099,Hilux,2026-08-05 06:58:00,2026-08-07 23:18:54,2026-08-07 23:03:54,self-drive,3080,9240,completed,pardz_records,loyal,Miguel Torres,miguel.torres@gmail.com,09556597514
+C0099,Hilux,2026-09-27 08:51:00,2026-09-28 13:26:54,2026-09-28 12:56:54,with driver,3120,8240,completed,pardz_records,loyal,Miguel Torres,miguel.torres@gmail.com,09556597514
+C0100,Vios,2025-02-24 08:15:00,2025-02-27 06:28:09,2025-02-27 06:12:09,self-drive,1570,4710,completed,pardz_records,one_time,Erika Magbanua,magbanua.erika@gmail.com,09611519397
+C0101,Fortuner,2026-05-19 11:57:00,2026-05-20 18:39:13,2026-05-20 17:59:13,self-drive,3630,7260,completed,pardz_records,one_time,Ana Mendoza,anam@gmail.com,09005649442
+C0102,Vios,2026-09-05 23:20:00,2026-09-06 19:40:01,2026-09-06 18:59:01,with driver,1670,2670,completed,pardz_records,loyal,Juan Del Rosario,juan.delrosario@gmail.com,09219016660
+C0103,Fortuner,2026-02-18 06:47:00,2026-02-18 21:34:40,2026-02-18 21:00:40,with driver,3760,4760,completed,pardz_records,occasional,John Fernandez,johnfernandez1992@gmail.com,09126669526
+C0103,Vios,2026-06-17 12:25:00,2026-06-18 16:16:28,2026-06-18 16:00:28,with driver,1510,5020,completed,pardz_records,occasional,John Fernandez,johnfernandez1992@gmail.com,09126669526
+C0103,Vios,2026-09-07 15:43:00,2026-09-12 00:05:51,2026-09-11 23:33:51,with driver,1690,13450,completed,pardz_records,occasional,John Fernandez,johnfernandez1992@gmail.com,09126669526
+C0104,Vios,2025-10-27 12:14:00,2025-10-28 14:23:22,2025-10-28 14:07:22,self-drive,1680,1680,completed,pardz_records,occasional,Janine Reyes,janinereyes1992@gmail.com,09676153913
+C0104,Vios,2025-12-11 06:13:00,2025-12-12 10:16:39,2025-12-12 09:28:39,self-drive,1510,3020,completed,pardz_records,occasional,Janine Reyes,janinereyes1992@gmail.com,09676153913
+C0104,Vios,2026-02-13 12:40:00,2026-02-14 18:14:12,2026-02-14 17:54:12,self-drive,1690,3380,completed,pardz_records,occasional,Janine Reyes,janinereyes1992@gmail.com,09676153913
+C0105,Vios,2025-08-25 09:25:00,2025-08-30 11:09:37,2025-08-30 10:26:37,with driver,1510,12550,completed,pardz_records,occasional,Mark Ramos,markr@gmail.com,09095714975
+C0106,Vios,2026-06-26 10:22:00,2026-06-27 14:04:33,2026-06-27 13:24:33,with driver,1650,5300,completed,pardz_records,loyal,Janine Pascual,janinepascual1997@gmail.com,09665448778
+C0106,Vios,2026-07-21 08:28:00,2026-07-22 14:11:54,2026-07-22 13:20:54,with driver,1660,5320,completed,pardz_records,loyal,Janine Pascual,janinepascual1997@gmail.com,09665448778
+C0106,Vios,2026-08-05 09:39:00,2026-08-06 15:14:17,2026-08-06 14:49:17,self-drive,1560,3120,completed,pardz_records,loyal,Janine Pascual,janinepascual1997@gmail.com,09665448778
+C0106,Vios,2026-09-05 07:33:00,2026-09-08 01:26:40,2026-09-08 00:54:40,with driver,1650,7950,completed,pardz_records,loyal,Janine Pascual,janinepascual1997@gmail.com,09665448778
+C0106,Vios,2026-09-10 07:02:00,2026-09-11 03:35:26,2026-09-11 03:06:26,with driver,1530,2530,completed,pardz_records,loyal,Janine Pascual,janinepascual1997@gmail.com,09665448778
+C0107,Fortuner,2025-04-29 06:05:00,2025-04-30 11:08:09,2025-04-30 10:16:09,with driver,3630,9260,completed,pardz_records,one_time,Camille Estrada,camille.estrada65@gmail.com,09197753321
+C0108,Vios,2026-09-23 11:05:00,2026-09-24 13:12:09,2026-09-24 12:43:09,with driver,1540,2540,completed,pardz_records,occasional,Gabriel Lopez,gabriel90@gmail.com,09986620506
+C0109,Vios,2025-05-06 10:34:00,2025-05-08 21:40:04,2025-05-08 21:26:04,with driver,1800,8400,completed,pardz_records,occasional,Dennis Fernandez,fernandezd37@gmail.com,09001813458
+C0110,Vios,2026-09-17 18:10:00,2026-09-18 15:13:18,2026-09-18 14:31:18,with driver,1560,2560,completed,pardz_records,loyal,Adrian Torres,adrian.torres@gmail.com,09036226278
+C0111,Vios,2025-04-08 18:15:00,2025-04-09 22:49:47,2025-04-09 22:22:47,with driver,1590,5180,completed,pardz_records,occasional,Angelica Santiago,angelica_1975@gmail.com,09677675740
+C0112,Vios,2026-05-23 10:49:00,2026-05-24 04:02:57,2026-05-24 03:36:57,with driver,1570,2570,completed,pardz_records,loyal,Diane Dizon,dianed@gmail.com,09241252200
+C0112,Vios,2026-06-26 11:15:00,2026-07-01 07:40:44,2026-07-01 07:18:44,with driver,1630,13150,completed,pardz_records,loyal,Diane Dizon,dianed@gmail.com,09241252200
+C0112,Vios,2026-08-18 18:49:00,2026-08-23 03:47:56,2026-08-23 02:57:56,with driver,1790,13950,completed,pardz_records,loyal,Diane Dizon,dianed@gmail.com,09241252200
+C0112,Vios,2026-09-14 06:42:00,2026-09-15 15:08:33,2026-09-15 14:59:33,with driver,1770,5540,completed,pardz_records,loyal,Diane Dizon,dianed@gmail.com,09241252200
+C0113,Vios,2025-09-08 09:38:00,2025-09-09 11:44:21,2025-09-09 11:10:21,self-drive,1720,1720,completed,pardz_records,one_time,Adrian Mercado,adrian.mercado@gmail.com,09547229877
+C0114,Vios,2025-12-11 08:06:00,2025-12-13 16:58:19,2025-12-13 16:13:19,self-drive,1680,5040,completed,pardz_records,one_time,Kristine Andrada,kristinea@gmail.com,09624671166
+C0115,Vios,2026-03-14 18:49:00,2026-03-15 11:02:49,2026-03-15 10:16:49,self-drive,1760,1760,completed,pardz_records,occasional,John Gonzales,john_gonzales@gmail.com,09711540361
+C0115,Vios,2026-05-15 12:19:00,2026-05-16 16:53:36,2026-05-16 16:24:36,with driver,1550,5100,completed,pardz_records,occasional,John Gonzales,john_gonzales@gmail.com,09711540361
+C0115,Vios,2026-06-26 08:31:00,2026-06-27 18:36:16,2026-06-27 18:08:16,self-drive,1650,3300,completed,pardz_records,occasional,John Gonzales,john_gonzales@gmail.com,09711540361
+C0116,Vios,2025-01-13 10:01:00,2025-01-14 12:14:41,2025-01-14 11:33:41,self-drive,1630,1630,completed,pardz_records,occasional,Princess Aquino,princess_aquino@gmail.com,09525794505
+C0116,Vios,2025-02-06 08:28:00,2025-02-08 06:42:09,2025-02-08 06:08:09,self-drive,1560,3120,completed,pardz_records,occasional,Princess Aquino,princess_aquino@gmail.com,09525794505
+C0117,Montero,2025-06-28 19:43:00,2025-06-30 05:02:13,2025-06-30 04:55:13,self-drive,3450,6900,completed,pardz_records,occasional,Adrian Sison,asison@gmail.com,09048738910
+C0117,Innova,2025-09-10 19:04:00,2025-09-11 20:03:54,2025-09-11 19:34:54,self-drive,2510,2510,completed,pardz_records,occasional,Adrian Sison,asison@gmail.com,09048738910
+C0117,Innova,2025-09-20 12:31:00,2025-09-21 06:16:05,2025-09-21 06:09:05,self-drive,2720,2720,completed,pardz_records,occasional,Adrian Sison,asison@gmail.com,09048738910
+C0117,Innova,2025-11-29 10:06:00,2025-11-30 14:21:00,2025-11-30 13:45:00,self-drive,2580,5160,completed,pardz_records,occasional,Adrian Sison,asison@gmail.com,09048738910
+C0117,Innova,2026-05-27 06:12:00,2026-05-28 12:51:51,2026-05-28 12:10:51,self-drive,2470,4940,completed,pardz_records,occasional,Adrian Sison,asison@gmail.com,09048738910
+C0117,Innova,2026-07-08 10:40:00,2026-07-13 14:03:47,2026-07-13 13:59:47,self-drive,2530,15180,completed,pardz_records,occasional,Adrian Sison,asison@gmail.com,09048738910
+C0118,Vios,2025-05-20 06:58:00,2025-05-22 14:30:38,2025-05-22 14:29:38,self-drive,1620,4860,completed,pardz_records,one_time,Miguel Tan,miguel87@gmail.com,09774879534
+C0119,Montero,2025-12-09 12:49:00,2025-12-10 05:05:33,2025-12-10 04:24:33,self-drive,3800,3800,completed,pardz_records,loyal,Maria Ramos,m.ramos@gmail.com,09359941045
+C0119,Vios,2025-12-28 08:28:00,2025-12-30 14:37:47,2025-12-30 16:25:47,with driver,1590,7770,completed,pardz_records,loyal,Maria Ramos,m.ramos@gmail.com,09359941045
+C0119,Vios,2026-01-03 18:42:00,2026-01-04 21:33:48,2026-01-04 21:33:48,with driver,1550,5100,completed,pardz_records,loyal,Maria Ramos,m.ramos@gmail.com,09359941045
+C0119,Vios,2026-03-23 12:54:00,2026-03-24 20:06:10,2026-03-24 19:54:10,self-drive,1520,3040,completed,pardz_records,loyal,Maria Ramos,m.ramos@gmail.com,09359941045
+C0119,Vios,2026-03-29 07:35:00,2026-03-30 08:43:06,2026-03-30 07:55:06,self-drive,1710,1710,completed,pardz_records,loyal,Maria Ramos,m.ramos@gmail.com,09359941045
+C0119,Vios,2026-05-29 09:28:00,2026-06-01 08:45:47,2026-06-01 08:03:47,self-drive,1670,5010,completed,pardz_records,loyal,Maria Ramos,m.ramos@gmail.com,09359941045
+C0119,Vios,2026-06-12 19:20:00,2026-06-14 04:05:45,2026-06-14 03:09:45,self-drive,1500,3000,completed,pardz_records,loyal,Maria Ramos,m.ramos@gmail.com,09359941045
+C0119,Vios,2026-06-29 09:37:00,2026-06-30 13:46:19,2026-06-30 12:50:19,self-drive,1670,3340,completed,pardz_records,loyal,Maria Ramos,m.ramos@gmail.com,09359941045
+C0119,Vios,2026-08-26 08:37:00,2026-08-27 04:50:38,2026-08-27 04:47:38,self-drive,1750,1750,completed,pardz_records,loyal,Maria Ramos,m.ramos@gmail.com,09359941045
+C0120,Vios,2025-03-06 10:50:00,2025-03-07 11:20:32,2025-03-07 17:14:32,with driver,1730,2730,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2025-03-19 06:31:00,2025-03-21 17:25:41,2025-03-21 16:46:41,with driver,1550,7650,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2025-05-12 10:46:00,2025-05-13 09:53:39,2025-05-13 12:40:39,with driver,1780,2780,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2025-06-11 08:22:00,2025-06-15 13:51:13,2025-06-15 12:59:13,with driver,1550,12750,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2025-07-06 18:15:00,2025-07-07 22:19:53,2025-07-08 00:05:53,with driver,1550,5100,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2025-08-01 12:36:00,2025-08-04 02:58:35,2025-08-04 02:45:35,with driver,1570,7710,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2025-08-12 06:01:00,2025-08-13 12:35:32,2025-08-13 12:17:32,with driver,1670,5340,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2025-08-23 09:49:00,2025-08-24 12:53:47,2025-08-24 14:07:47,self-drive,1770,3540,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2025-09-23 15:06:00,2025-09-24 06:51:34,2025-09-24 06:24:34,with driver,1750,2750,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2025-10-23 15:58:00,2025-10-24 14:38:08,2025-10-24 13:59:08,with driver,1680,2680,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2025-11-08 07:02:00,2025-11-10 10:35:05,2025-11-10 09:46:05,self-drive,1550,4650,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2025-11-29 10:09:00,2025-11-30 08:48:32,2025-11-30 08:39:32,self-drive,1580,1580,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2026-01-04 08:38:00,2026-01-05 11:15:18,2026-01-05 11:13:18,with driver,1750,5500,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2026-01-18 09:58:00,2026-01-19 13:08:49,2026-01-19 12:41:49,self-drive,1580,3160,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2026-01-24 07:46:00,2026-01-26 06:57:43,2026-01-26 06:51:43,self-drive,1800,3600,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2026-03-28 06:06:00,2026-03-29 07:49:27,2026-03-29 07:33:27,self-drive,1730,1730,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2026-04-29 09:01:00,2026-04-30 07:27:37,2026-04-30 07:00:37,with driver,1620,2620,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2026-05-17 10:11:00,2026-05-18 13:26:13,2026-05-18 12:41:13,self-drive,1540,3080,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2026-06-02 18:06:00,2026-06-05 06:04:52,2026-06-05 11:22:52,with driver,1620,7860,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2026-06-16 12:46:00,2026-06-17 05:55:10,2026-06-17 05:04:10,with driver,1670,2670,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2026-08-08 07:46:00,2026-08-09 06:24:04,2026-08-09 06:05:04,with driver,1700,2700,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2026-08-17 09:51:00,2026-08-19 12:41:55,2026-08-19 13:49:55,with driver,1580,7740,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0120,Vios,2026-09-20 07:58:00,2026-09-23 00:19:46,2026-09-23 01:34:46,with driver,1700,8100,completed,pardz_records,loyal,Jasmine Fernandez,jfernandez@gmail.com,09121606075
+C0121,Hilux,2026-04-21 12:14:00,2026-04-22 16:55:16,2026-04-22 16:39:16,self-drive,3010,6020,completed,pardz_records,one_time,Camille Sison,camille.sison@gmail.com,09518223018
+C0122,Vios,2026-01-02 07:40:00,2026-01-03 07:20:37,2026-01-03 06:33:37,with driver,1650,2650,completed,pardz_records,occasional,Allan Reyes,allanr@gmail.com,09085108530
+C0122,Vios,2026-03-21 09:54:00,2026-03-22 15:02:35,2026-03-22 14:24:35,with driver,1560,5120,completed,pardz_records,occasional,Allan Reyes,allanr@gmail.com,09085108530
+C0123,Vios,2026-09-16 11:55:00,2026-09-17 10:32:21,2026-09-17 09:33:21,with driver,1570,2570,completed,pardz_records,one_time,Jasmine Mercado,itsjasminem@gmail.com,09758515719
+C0124,Vios,2026-09-12 15:17:00,2026-09-13 13:21:40,2026-09-13 13:13:40,self-drive,1780,1780,completed,pardz_records,one_time,Cherry Garcia,cherryg@gmail.com,09927251779
+C0125,Vios,2026-07-28 07:38:00,2026-07-29 10:23:41,2026-07-29 10:20:41,self-drive,1560,3120,completed,pardz_records,occasional,Arnel Aquino,arnel.aquino@gmail.com,09490787409
+C0126,Vios,2025-10-29 07:18:00,2025-10-30 16:26:52,2025-10-30 15:59:52,with driver,1630,5260,completed,pardz_records,one_time,Miguel Lopez,lopezm74@gmail.com,09567562090
+C0127,Innova,2026-07-16 07:16:00,2026-07-17 04:03:08,2026-07-17 06:12:08,self-drive,2440,2440,completed,pardz_records,loyal,Rafael Gomez,rgomez@gmail.com,09289388938
+C0127,Innova,2026-09-02 09:07:00,2026-09-04 18:29:06,2026-09-04 18:25:06,self-drive,2690,8070,completed,pardz_records,loyal,Rafael Gomez,rgomez@gmail.com,09289388938
+C0127,Montero,2026-09-18 07:59:00,2026-09-22 16:45:45,2026-09-22 16:25:45,self-drive,3500,17500,completed,pardz_records,loyal,Rafael Gomez,rgomez@gmail.com,09289388938
+C0128,Vios,2026-06-29 07:20:00,2026-06-29 22:06:47,2026-06-29 21:44:47,self-drive,1550,1550,completed,pardz_records,occasional,Allan Lim,alim@gmail.com,09632456915
+C0129,Vios,2026-05-21 10:20:00,2026-05-22 14:52:27,2026-05-22 14:17:27,with driver,1580,5160,completed,pardz_records,one_time,Erika Estrada,e.estrada@gmail.com,09229276431
+C0130,Vios,2025-02-14 19:02:00,2025-02-19 13:19:38,2025-02-19 14:26:38,self-drive,1510,7550,completed,pardz_records,occasional,Rafael Villareal,villareal.rafael@gmail.com,09100531883
+C0130,Vios,2025-04-12 12:26:00,2025-04-13 12:12:41,2025-04-13 13:49:41,self-drive,1640,1640,completed,pardz_records,occasional,Rafael Villareal,villareal.rafael@gmail.com,09100531883
+C0130,Vios,2025-12-07 09:55:00,2025-12-09 21:39:29,2025-12-09 21:07:29,with driver,1650,7950,completed,pardz_records,occasional,Rafael Villareal,villareal.rafael@gmail.com,09100531883
+C0131,Vios,2026-08-11 08:26:00,2026-08-12 09:23:33,2026-08-12 09:23:33,with driver,1700,2700,completed,pardz_records,occasional,Carlo Rivera,rivera.carlo@gmail.com,09750359676
+C0131,Innova,2026-09-24 15:18:00,2026-09-25 15:19:49,2026-09-25 14:20:49,with driver,2700,3700,completed,pardz_records,occasional,Carlo Rivera,rivera.carlo@gmail.com,09750359676
+C0132,Vios,2026-03-13 06:10:00,2026-03-14 09:52:16,2026-03-14 09:41:16,self-drive,1510,3020,completed,pardz_records,one_time,Liza Castro,liza93@gmail.com,09194849942
+C0133,Vios,2026-06-04 08:00:00,2026-06-06 21:00:49,2026-06-06 20:46:49,self-drive,1580,4740,completed,pardz_records,occasional,Carlo Tan,carlot@gmail.com,09168045849
+C0133,Vios,2026-08-11 08:39:00,2026-08-12 12:31:42,2026-08-12 11:49:42,self-drive,1740,3480,completed,pardz_records,occasional,Carlo Tan,carlot@gmail.com,09168045849
+C0134,Vios,2026-01-14 10:39:00,2026-01-15 17:03:33,2026-01-15 22:11:33,self-drive,1780,3560,completed,pardz_records,loyal,Grace Lopez,glopez@gmail.com,09706292934
+C0134,Vios,2026-01-31 12:27:00,2026-02-01 07:43:43,2026-02-01 07:06:43,with driver,1580,2580,completed,pardz_records,loyal,Grace Lopez,glopez@gmail.com,09706292934
+C0134,Vios,2026-03-16 23:46:00,2026-03-18 03:28:35,2026-03-18 02:49:35,self-drive,1690,3380,completed,pardz_records,loyal,Grace Lopez,glopez@gmail.com,09706292934
+C0134,Vios,2026-04-17 11:26:00,2026-04-18 14:24:28,2026-04-18 14:10:28,self-drive,1570,3140,completed,pardz_records,loyal,Grace Lopez,glopez@gmail.com,09706292934
+C0134,Vios,2026-04-22 15:40:00,2026-04-27 02:32:53,2026-04-27 05:55:53,self-drive,1760,8800,completed,pardz_records,loyal,Grace Lopez,glopez@gmail.com,09706292934
+C0135,Vios,2025-03-11 18:17:00,2025-03-12 12:00:36,2025-03-12 11:50:36,self-drive,1540,1540,completed,pardz_records,loyal,Noel Reyes,itsnoelr@gmail.com,09661657924
+C0135,Vios,2025-04-10 06:40:00,2025-04-11 06:32:25,2025-04-11 06:19:25,self-drive,1600,1600,completed,pardz_records,loyal,Noel Reyes,itsnoelr@gmail.com,09661657924
+C0135,Vios,2025-06-23 10:48:00,2025-06-28 05:53:30,2025-06-28 05:09:30,with driver,1550,12750,completed,pardz_records,loyal,Noel Reyes,itsnoelr@gmail.com,09661657924
+C0135,Vios,2025-08-01 06:16:00,2025-08-02 03:56:44,2025-08-02 03:04:44,with driver,1710,2710,completed,pardz_records,loyal,Noel Reyes,itsnoelr@gmail.com,09661657924
+C0136,Vios,2026-04-28 07:21:00,2026-04-29 00:06:01,2026-04-28 23:23:01,self-drive,1800,1800,completed,pardz_records,one_time,Maria Navarro,maria.navarro61@gmail.com,09308560892
+C0137,Vios,2026-05-26 09:51:00,2026-05-27 10:43:16,2026-05-27 10:29:16,self-drive,1650,1650,completed,pardz_records,occasional,Adrian Aquino,adrian_aquino@gmail.com,09619763757
+C0137,Vios,2026-07-21 15:14:00,2026-07-23 20:56:08,2026-07-23 20:42:08,self-drive,1690,5070,completed,pardz_records,occasional,Adrian Aquino,adrian_aquino@gmail.com,09619763757
+C0138,Fortuner,2025-02-15 10:54:00,2025-02-16 17:12:29,2025-02-16 16:59:29,self-drive,3850,7700,completed,pardz_records,occasional,Carlo Sison,carlosison@gmail.com,09843459152
+C0139,Vios,2026-08-09 18:35:00,2026-08-14 00:12:15,2026-08-13 23:59:15,with driver,1570,12850,completed,pardz_records,one_time,Dennis Lopez,dennislopez@gmail.com,09899726329
+C0140,Vios,2026-05-04 10:17:00,2026-05-05 16:45:48,2026-05-05 16:15:48,self-drive,1750,3500,completed,pardz_records,occasional,Vincent Lopez,lopez.vincent@gmail.com,09510456768
+C0140,Vios,2026-07-07 12:52:00,2026-07-08 16:02:28,2026-07-08 15:25:28,with driver,1680,5360,completed,pardz_records,occasional,Vincent Lopez,lopez.vincent@gmail.com,09510456768
+C0140,Vios,2026-09-06 12:01:00,2026-09-07 16:57:08,2026-09-07 19:57:08,with driver,1770,5540,completed,pardz_records,occasional,Vincent Lopez,lopez.vincent@gmail.com,09510456768
+C0141,Vios,2026-07-18 09:14:00,2026-07-20 07:42:56,2026-07-20 06:43:56,with driver,1570,5140,completed,pardz_records,one_time,Kimberly Garcia,itskimberlyg@gmail.com,09094789534
+C0142,Vios,2025-12-22 06:09:00,2025-12-22 20:58:25,2025-12-22 20:40:25,self-drive,1610,1610,completed,pardz_records,occasional,Rafael Mendoza,rafaelmendoza@gmail.com,09726374280
+C0143,Vios,2025-11-17 18:13:00,2025-11-18 20:16:32,2025-11-18 19:47:32,self-drive,1630,1630,completed,pardz_records,one_time,Rafael Dizon,rafael.dizon@gmail.com,09404682931
+C0144,Vios,2026-08-18 09:24:00,2026-08-19 11:02:01,2026-08-19 10:17:01,self-drive,1690,1690,completed,pardz_records,one_time,Carlo Gonzales,cgonzales@gmail.com,09892213331
+C0145,Fortuner,2026-07-03 19:36:00,2026-07-04 22:51:03,2026-07-04 22:05:03,self-drive,3770,7540,completed,pardz_records,loyal,Patricia Dizon,patriciadizon@gmail.com,09003842813
+C0145,Fortuner,2026-08-10 06:33:00,2026-08-11 10:46:27,2026-08-11 10:13:27,with driver,3990,9980,completed,pardz_records,loyal,Patricia Dizon,patriciadizon@gmail.com,09003842813
+C0145,Vios,2026-08-16 19:17:00,2026-08-17 10:24:07,2026-08-17 10:14:07,self-drive,1510,1510,completed,pardz_records,loyal,Patricia Dizon,patriciadizon@gmail.com,09003842813
+C0145,Fortuner,2026-08-24 10:13:00,2026-08-29 04:03:21,2026-08-29 03:13:21,with driver,3730,23650,completed,pardz_records,loyal,Patricia Dizon,patriciadizon@gmail.com,09003842813
+C0145,Fortuner,2026-09-27 07:50:00,2026-09-28 10:22:30,2026-09-28 09:29:30,self-drive,3640,7280,completed,pardz_records,loyal,Patricia Dizon,patriciadizon@gmail.com,09003842813
+C0146,Fortuner,2025-05-19 12:07:00,2025-05-20 19:48:21,2025-05-20 19:24:21,self-drive,3650,7300,completed,pardz_records,occasional,Janine Villareal,janine.villareal@gmail.com,09323534641
+C0147,Vios,2026-04-02 06:11:00,2026-04-03 04:01:16,2026-04-03 04:01:16,self-drive,1500,1500,completed,pardz_records,one_time,Juan Dizon,itsjuand@gmail.com,09617095500
+C0148,Montero,2025-02-04 06:32:00,2025-02-05 08:09:09,2025-02-05 10:24:09,self-drive,3420,3420,completed,pardz_records,occasional,Cherry Lopez,c.lopez@gmail.com,09078716418
+C0148,Montero,2025-04-12 11:55:00,2025-04-14 08:29:59,2025-04-14 08:25:59,with driver,3760,9520,completed,pardz_records,occasional,Cherry Lopez,c.lopez@gmail.com,09078716418
+C0148,Montero,2025-07-20 07:24:00,2025-07-21 04:33:03,2025-07-21 06:59:03,self-drive,3620,3620,completed,pardz_records,occasional,Cherry Lopez,c.lopez@gmail.com,09078716418
+C0148,Montero,2025-12-02 10:05:00,2025-12-03 14:26:34,2025-12-03 14:20:34,self-drive,3480,6960,completed,pardz_records,occasional,Cherry Lopez,c.lopez@gmail.com,09078716418
+C0149,Vios,2026-05-25 06:11:00,2026-05-26 10:14:41,2026-05-26 10:08:41,self-drive,1590,3180,completed,pardz_records,one_time,Marlon Torres,m.torres@gmail.com,09659238435
+C0150,Innova,2025-10-21 10:28:00,2025-10-22 06:59:42,2025-10-22 06:56:42,self-drive,2570,2570,completed,pardz_records,one_time,Ramon Villanueva,villanuevar88@gmail.com,09510810661
+C0151,Vios,2025-05-04 08:57:00,2025-05-05 08:29:45,2025-05-05 07:37:45,with driver,1670,2670,completed,pardz_records,occasional,Adrian Flores,adrian.flores@gmail.com,09223582018
+C0151,Vios,2025-06-24 23:43:00,2025-06-27 07:14:55,2025-06-27 07:04:55,self-drive,1610,4830,completed,pardz_records,occasional,Adrian Flores,adrian.flores@gmail.com,09223582018
+C0152,Vios,2025-03-13 18:26:00,2025-03-14 21:14:01,2025-03-14 20:23:01,with driver,1570,5140,completed,pardz_records,one_time,Trisha Estrada,estrada.trisha@gmail.com,09044772241
+C0153,Vios,2025-02-28 11:37:00,2025-03-01 12:55:52,2025-03-01 11:56:52,self-drive,1580,1580,completed,pardz_records,one_time,Erika Garcia,erikag@gmail.com,09514754058
+C0154,Vios,2026-02-11 07:19:00,2026-02-12 10:29:09,2026-02-12 10:24:09,self-drive,1540,3080,completed,pardz_records,one_time,Noel Domingo,noeldomingo2000@gmail.com,09447481875
+C0155,Vios,2026-08-10 10:20:00,2026-08-12 19:37:34,2026-08-12 19:35:34,self-drive,1720,5160,completed,pardz_records,occasional,Diane Domingo,domingo.diane@gmail.com,09372519361
+C0155,Vios,2026-08-29 07:44:00,2026-08-31 05:54:06,2026-08-31 05:15:06,self-drive,1770,3540,completed,pardz_records,occasional,Diane Domingo,domingo.diane@gmail.com,09372519361
+C0155,Vios,2026-09-22 07:55:00,2026-09-23 05:17:19,2026-09-23 04:42:19,self-drive,1540,1540,completed,pardz_records,occasional,Diane Domingo,domingo.diane@gmail.com,09372519361
+C0156,Vios,2026-07-18 06:43:00,2026-07-20 12:28:26,2026-07-20 12:16:26,with driver,1560,7680,completed,pardz_records,loyal,Princess Garcia,princessg@gmail.com,09685072761
+C0156,Vios,2026-08-02 06:14:00,2026-08-03 06:11:32,2026-08-03 05:25:32,self-drive,1670,1670,completed,pardz_records,loyal,Princess Garcia,princessg@gmail.com,09685072761
+C0156,Vios,2026-09-15 09:23:00,2026-09-16 15:41:30,2026-09-16 14:43:30,with driver,1600,5200,completed,pardz_records,loyal,Princess Garcia,princessg@gmail.com,09685072761
+C0157,Montero,2025-01-27 07:19:00,2025-01-28 06:20:29,2025-01-28 06:09:29,self-drive,3460,3460,completed,pardz_records,occasional,Noel Castillo,itsnoelc@gmail.com,09298001602
+C0157,Montero,2025-02-11 10:21:00,2025-02-12 14:07:26,2025-02-12 13:44:26,self-drive,3660,7320,completed,pardz_records,occasional,Noel Castillo,itsnoelc@gmail.com,09298001602
+C0157,Montero,2025-04-08 23:57:00,2025-04-11 22:10:09,2025-04-11 21:21:09,with driver,3660,13980,completed,pardz_records,occasional,Noel Castillo,itsnoelc@gmail.com,09298001602
+C0158,Innova,2026-04-12 08:44:00,2026-04-14 20:45:32,2026-04-14 19:48:32,self-drive,2580,7740,completed,pardz_records,occasional,Miguel Tomas,migueltomas@gmail.com,09360294514
+C0159,Vios,2026-01-01 08:38:00,2026-01-02 10:05:41,2026-01-02 09:54:41,self-drive,1720,1720,completed,pardz_records,one_time,Maria Andrada,andrada.maria@gmail.com,09851535974
+C0160,Vios,2026-05-31 18:03:00,2026-06-01 14:18:37,2026-06-01 13:22:37,self-drive,1640,1640,completed,pardz_records,one_time,Cherry Andrada,itscherrya@gmail.com,09580003122
+C0161,Vios,2026-09-29 18:24:00,2026-09-30 15:13:06,2026-09-30 14:29:06,self-drive,1760,1760,completed,pardz_records,occasional,Janine Magbanua,janinemagbanua1996@gmail.com,09735309769
+C0162,Vios,2026-09-07 18:06:00,2026-09-08 22:48:50,2026-09-08 22:11:50,self-drive,1740,3480,completed,pardz_records,one_time,Adrian Galang,adrian.galang49@gmail.com,09940066288
+C0163,Vios,2025-03-06 18:34:00,2025-03-07 15:02:58,2025-03-07 14:36:58,with driver,1770,2770,completed,pardz_records,occasional,Paul Andrada,paul.andrada07@gmail.com,09599117322
+C0164,Vios,2025-05-07 10:20:00,2025-05-08 16:34:51,2025-05-08 20:24:51,self-drive,1790,3580,completed,pardz_records,one_time,Hazel Morales,hazelmorales@gmail.com,09930459287
+C0165,Vios,2026-01-17 12:03:00,2026-01-21 17:52:43,2026-01-21 17:31:43,self-drive,1700,8500,completed,pardz_records,occasional,Paolo Reyes,paolo_2003@gmail.com,09651517974
+C0166,Vios,2026-08-16 18:39:00,2026-08-17 22:56:51,2026-08-17 22:47:51,self-drive,1650,3300,completed,pardz_records,one_time,Juan Tolentino,juan_tolentino@gmail.com,09233081714
+C0167,Vios,2025-07-27 23:43:00,2025-07-30 10:03:32,2025-07-30 09:20:32,self-drive,1680,5040,completed,pardz_records,loyal,John Tan,johntan@gmail.com,09898836835
+C0168,Vios,2026-05-19 06:53:00,2026-05-20 09:30:00,2026-05-20 08:36:00,self-drive,1630,3260,completed,pardz_records,occasional,Princess Tomas,itsprincesst@gmail.com,09564401954
+C0168,Vios,2026-07-28 07:42:00,2026-07-29 06:38:15,2026-07-29 06:36:15,self-drive,1570,1570,completed,pardz_records,occasional,Princess Tomas,itsprincesst@gmail.com,09564401954
+C0169,Vios,2026-06-17 12:25:00,2026-06-19 09:29:09,2026-06-19 09:25:09,self-drive,1510,3020,completed,pardz_records,occasional,Trisha Villanueva,t.villanueva@gmail.com,09374958453
+C0169,Vios,2026-08-02 19:33:00,2026-08-05 00:55:05,2026-08-05 00:32:05,self-drive,1570,4710,completed,pardz_records,occasional,Trisha Villanueva,t.villanueva@gmail.com,09374958453
+C0169,Vios,2026-09-17 07:34:00,2026-09-18 13:39:29,2026-09-18 13:35:29,self-drive,1610,3220,completed,pardz_records,occasional,Trisha Villanueva,t.villanueva@gmail.com,09374958453
+C0169,Vios,2026-09-25 11:17:00,2026-09-26 17:55:35,2026-09-26 17:43:35,self-drive,1630,3260,completed,pardz_records,occasional,Trisha Villanueva,t.villanueva@gmail.com,09374958453
+C0170,Innova,2025-12-03 11:39:00,2025-12-05 17:41:32,2025-12-05 16:52:32,with driver,2610,10830,completed,pardz_records,one_time,Patricia Reyes,patriciareyes@gmail.com,09362655388
+C0171,Vios,2025-04-16 12:49:00,2025-04-18 19:50:41,2025-04-19 01:49:41,self-drive,1770,5310,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Vios,2025-05-10 12:48:00,2025-05-11 21:44:29,2025-05-12 06:36:29,self-drive,1770,3540,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Vios,2025-07-19 18:40:00,2025-07-20 23:46:29,2025-07-20 22:53:29,self-drive,1770,3540,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Vios,2025-08-20 19:22:00,2025-08-23 10:27:33,2025-08-23 09:44:33,self-drive,1550,4650,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Montero,2025-09-30 23:57:00,2025-10-02 07:41:36,2025-10-02 10:39:36,self-drive,3640,7280,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Montero,2025-11-06 06:08:00,2025-11-08 07:21:40,2025-11-08 08:50:40,with driver,3590,9180,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Innova,2025-11-30 07:24:00,2025-12-01 12:02:08,2025-12-01 17:23:08,self-drive,2610,5220,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Vios,2025-12-30 07:13:00,2026-01-04 03:23:03,2026-01-04 03:21:03,with driver,1800,14000,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Innova,2026-01-16 19:27:00,2026-01-18 18:06:04,2026-01-18 17:15:04,self-drive,2590,5180,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Vios,2026-03-24 07:49:00,2026-03-25 08:04:39,2026-03-25 13:45:39,self-drive,1770,1770,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Vios,2026-04-27 12:39:00,2026-04-28 10:00:26,2026-04-28 09:37:26,self-drive,1720,1720,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Vios,2026-05-12 12:42:00,2026-05-13 17:05:05,2026-05-13 16:16:05,self-drive,1700,3400,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Vios,2026-07-09 12:42:00,2026-07-10 16:53:36,2026-07-10 18:24:36,self-drive,1710,3420,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Vios,2026-08-02 07:50:00,2026-08-03 08:02:59,2026-08-03 09:45:59,self-drive,1660,1660,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Vios,2026-09-15 12:47:00,2026-09-16 15:52:37,2026-09-16 19:32:37,self-drive,1760,3520,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0171,Vios,2026-09-22 12:30:00,2026-09-23 03:32:07,2026-09-23 06:00:07,self-drive,1640,1640,completed,pardz_records,loyal,Gabriel Ramos,gabriel.ramos@gmail.com,09154242902
+C0172,Vios,2026-08-23 18:30:00,2026-08-24 19:13:11,2026-08-24 18:40:11,with driver,1720,2720,completed,pardz_records,loyal,Christian Lim,christian.lim@gmail.com,09378837944
+C0173,Vios,2025-07-31 15:36:00,2025-08-01 19:16:18,2025-08-01 19:06:18,self-drive,1740,3480,completed,pardz_records,occasional,Joanna Panganiban,joannapanganiban1991@gmail.com,09848925504
+C0173,Vios,2025-08-10 06:57:00,2025-08-14 09:09:48,2025-08-14 08:40:48,self-drive,1530,6120,completed,pardz_records,occasional,Joanna Panganiban,joannapanganiban1991@gmail.com,09848925504
+C0174,Vios,2026-01-10 18:15:00,2026-01-11 21:51:55,2026-01-11 21:16:55,with driver,1500,5000,completed,pardz_records,loyal,Jerome Aquino,aquinoj32@gmail.com,09029159426
+C0174,Innova,2026-01-24 18:44:00,2026-01-26 01:46:16,2026-01-26 01:28:16,self-drive,2420,4840,completed,pardz_records,loyal,Jerome Aquino,aquinoj32@gmail.com,09029159426
+C0174,Vios,2026-02-25 10:59:00,2026-02-26 07:47:05,2026-02-26 07:33:05,with driver,1570,2570,completed,pardz_records,loyal,Jerome Aquino,aquinoj32@gmail.com,09029159426
+C0174,Vios,2026-06-01 15:23:00,2026-06-02 14:59:12,2026-06-02 14:20:12,with driver,1740,2740,completed,pardz_records,loyal,Jerome Aquino,aquinoj32@gmail.com,09029159426
+C0174,Vios,2026-06-18 12:02:00,2026-06-19 11:29:58,2026-06-19 11:14:58,with driver,1600,2600,completed,pardz_records,loyal,Jerome Aquino,aquinoj32@gmail.com,09029159426
+C0174,Vios,2026-07-08 06:27:00,2026-07-09 05:20:28,2026-07-09 04:53:28,with driver,1520,2520,completed,pardz_records,loyal,Jerome Aquino,aquinoj32@gmail.com,09029159426
+C0174,Vios,2026-07-27 09:40:00,2026-07-31 11:08:09,2026-07-31 10:50:09,with driver,1710,10840,completed,pardz_records,loyal,Jerome Aquino,aquinoj32@gmail.com,09029159426
+C0174,Vios,2026-08-20 06:14:00,2026-08-21 07:29:43,2026-08-21 06:43:43,with driver,1660,2660,completed,pardz_records,loyal,Jerome Aquino,aquinoj32@gmail.com,09029159426
+C0175,Vios,2026-09-10 18:20:00,2026-09-11 15:26:12,2026-09-11 18:06:12,with driver,1710,2710,completed,pardz_records,loyal,Allan Soriano,allan.soriano@gmail.com,09928123489
+C0176,Vios,2026-08-02 18:39:00,2026-08-04 00:25:00,2026-08-03 23:34:00,self-drive,1690,3380,completed,pardz_records,loyal,Paolo Bautista,paolo_1995@gmail.com,09381718983
+C0176,Fortuner,2026-08-27 12:07:00,2026-08-29 12:16:37,2026-08-29 12:13:37,with driver,3960,9920,completed,pardz_records,loyal,Paolo Bautista,paolo_1995@gmail.com,09381718983
+C0177,Innova,2026-07-14 19:10:00,2026-07-15 23:21:20,2026-07-16 00:43:20,with driver,2510,7020,completed,pardz_records,one_time,Princess Lopez,p.lopez@gmail.com,09521335017
+C0178,Vios,2025-09-29 08:23:00,2025-09-30 11:56:59,2025-09-30 11:33:59,self-drive,1660,3320,completed,pardz_records,one_time,Diane Galang,diane.galang05@gmail.com,09767668629
+C0179,Vios,2025-05-24 09:19:00,2025-05-25 13:04:20,2025-05-25 12:12:20,self-drive,1780,3560,completed,pardz_records,loyal,Mae Tan,mae_tan@gmail.com,09168544969
+C0180,Vios,2025-01-09 12:04:00,2025-01-10 12:42:50,2025-01-10 16:33:50,with driver,1740,2740,completed,pardz_records,one_time,Joshua Lim,jlim@gmail.com,09283193907
+C0181,Vios,2025-06-03 09:08:00,2025-06-04 08:58:48,2025-06-04 08:25:48,with driver,1790,2790,completed,pardz_records,occasional,Paolo Gomez,p.gomez@gmail.com,09109536740
+C0181,Vios,2025-10-13 08:07:00,2025-10-14 11:25:07,2025-10-14 13:47:07,with driver,1620,5240,completed,pardz_records,occasional,Paolo Gomez,p.gomez@gmail.com,09109536740
+C0182,Vios,2025-09-04 06:19:00,2025-09-05 16:18:12,2025-09-05 16:04:12,with driver,1560,5120,completed,pardz_records,loyal,Camille Tan,itscamillet@gmail.com,09522620961
+C0182,Vios,2025-10-30 07:09:00,2025-10-31 16:00:40,2025-10-31 15:55:40,with driver,1600,5200,completed,pardz_records,loyal,Camille Tan,itscamillet@gmail.com,09522620961
+C0182,Vios,2025-11-19 06:55:00,2025-11-20 15:46:06,2025-11-20 15:03:06,with driver,1630,5260,completed,pardz_records,loyal,Camille Tan,itscamillet@gmail.com,09522620961
+C0182,Vios,2025-12-06 06:05:00,2025-12-07 04:57:33,2025-12-07 13:24:33,with driver,1600,2600,completed,pardz_records,loyal,Camille Tan,itscamillet@gmail.com,09522620961
+C0182,Vios,2025-12-21 19:34:00,2025-12-24 13:30:50,2025-12-24 12:37:50,with driver,1710,8130,completed,pardz_records,loyal,Camille Tan,itscamillet@gmail.com,09522620961
+C0183,Vios,2025-09-28 09:23:00,2025-09-29 08:59:14,2025-09-29 08:42:14,self-drive,1610,1610,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2025-10-14 18:35:00,2025-10-15 09:26:54,2025-10-15 09:12:54,self-drive,1630,1630,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2025-10-19 09:26:00,2025-10-20 01:55:11,2025-10-20 01:43:11,self-drive,1650,1650,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2025-12-25 18:18:00,2025-12-28 06:19:07,2025-12-28 05:52:07,self-drive,1570,4710,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2026-01-27 09:21:00,2026-01-28 11:29:05,2026-01-28 11:25:05,self-drive,1550,1550,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2026-02-12 09:02:00,2026-02-14 06:45:20,2026-02-14 15:32:20,self-drive,1750,3500,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2026-03-21 19:12:00,2026-03-22 20:35:27,2026-03-22 20:10:27,self-drive,1640,1640,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2026-05-02 06:14:00,2026-05-03 06:31:58,2026-05-03 12:24:58,self-drive,1520,1520,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2026-05-27 18:48:00,2026-05-28 18:04:48,2026-05-28 18:02:48,self-drive,1510,1510,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2026-06-05 10:02:00,2026-06-06 12:30:50,2026-06-06 11:47:50,self-drive,1580,3160,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2026-06-30 07:23:00,2026-07-01 11:51:52,2026-07-01 11:46:52,with driver,1600,5200,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2026-07-17 11:53:00,2026-07-18 16:19:07,2026-07-18 15:36:07,self-drive,1740,3480,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2026-08-10 23:38:00,2026-08-12 11:00:47,2026-08-12 10:44:47,self-drive,1550,3100,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0183,Vios,2026-08-29 11:43:00,2026-08-30 19:44:09,2026-08-30 19:39:09,self-drive,1550,3100,completed,pardz_records,loyal,Rey Reyes,rey.reyes@gmail.com,09454056758
+C0184,Innova,2026-08-30 06:06:00,2026-08-31 02:14:08,2026-08-31 01:39:08,self-drive,2500,2500,completed,pardz_records,loyal,Vincent Flores,vincent.flores@gmail.com,09197224440
+C0184,Vios,2026-09-15 09:26:00,2026-09-16 12:08:35,2026-09-16 11:11:35,self-drive,1600,3200,completed,pardz_records,loyal,Vincent Flores,vincent.flores@gmail.com,09197224440
+C0185,Vios,2026-03-31 12:38:00,2026-04-01 18:01:16,2026-04-01 17:04:16,self-drive,1780,3560,completed,pardz_records,one_time,Dennis Santos,dennissantos1975@gmail.com,09308450808
+C0186,Montero,2025-10-03 18:10:00,2025-10-06 03:50:02,2025-10-07 04:42:02,self-drive,3650,10950,completed,pardz_records,loyal,Camille Flores,camilleflores@gmail.com,09789388904
+C0186,Vios,2025-10-18 12:19:00,2025-10-21 02:49:33,2025-10-21 02:41:33,self-drive,1740,5220,completed,pardz_records,loyal,Camille Flores,camilleflores@gmail.com,09789388904
+C0186,Montero,2025-12-20 12:09:00,2025-12-24 13:17:42,2025-12-24 13:05:42,self-drive,3780,15120,completed,pardz_records,loyal,Camille Flores,camilleflores@gmail.com,09789388904
+C0186,Montero,2026-01-17 10:12:00,2026-01-18 10:39:33,2026-01-18 16:17:33,with driver,3610,4610,completed,pardz_records,loyal,Camille Flores,camilleflores@gmail.com,09789388904
+C0186,Montero,2026-02-11 23:09:00,2026-02-12 23:52:07,2026-02-12 23:26:07,self-drive,3610,3610,completed,pardz_records,loyal,Camille Flores,camilleflores@gmail.com,09789388904
+C0186,Montero,2026-04-12 07:40:00,2026-04-13 09:14:37,2026-04-13 11:00:37,self-drive,3450,3450,completed,pardz_records,loyal,Camille Flores,camilleflores@gmail.com,09789388904
+C0186,Montero,2026-05-30 23:24:00,2026-05-31 19:08:07,2026-05-31 18:42:07,self-drive,3600,3600,completed,pardz_records,loyal,Camille Flores,camilleflores@gmail.com,09789388904
+C0186,Innova,2026-06-16 10:18:00,2026-06-17 17:26:19,2026-06-17 16:35:19,self-drive,2490,4980,completed,pardz_records,loyal,Camille Flores,camilleflores@gmail.com,09789388904
+C0186,Vios,2026-08-03 08:09:00,2026-08-05 20:41:16,2026-08-05 20:00:16,self-drive,1650,4950,completed,pardz_records,loyal,Camille Flores,camilleflores@gmail.com,09789388904

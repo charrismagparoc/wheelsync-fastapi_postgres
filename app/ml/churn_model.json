@@ -1,0 +1,87 @@
+{
+  "trained_at": "2026-10-29T07:53:32+00:00",
+  "model": "RandomForestClassifier",
+  "params": {
+    "n_estimators": 200,
+    "max_depth": 4,
+    "min_samples_leaf": 10,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "features": [
+    "days_since_last_rental",
+    "total_rentals_completed",
+    "avg_days_between_rentals",
+    "late_return_rate",
+    "preferred_service_type",
+    "customer_tenure_days"
+  ],
+  "churn_window_days": 180,
+  "risk_threshold": 0.4,
+  "rentals": 542,
+  "customers": 186,
+  "training_rows": 336,
+  "churned_rows": 130,
+  "train_rows": 271,
+  "test_rows": 65,
+  "test": {
+    "accuracy": 0.662,
+    "precision": 0.541,
+    "recall": 0.8,
+    "f1": 0.645,
+    "auc_roc": 0.763
+  },
+  "cross_validation": {
+    "accuracy": 0.686,
+    "precision": 0.572,
+    "recall": 0.752,
+    "f1": 0.65,
+    "auc_roc": 0.794
+  },
+  "recall_target": 0.75,
+  "label_check": {
+    "at_risk_correct": 0.572,
+    "likely_correct": 0.805,
+    "risk_bands": [
+      {
+        "from": 0,
+        "to": 20,
+        "examples": 55,
+        "churned": 0.127
+      },
+      {
+        "from": 20,
+        "to": 40,
+        "examples": 78,
+        "churned": 0.244
+      },
+      {
+        "from": 40,
+        "to": 60,
+        "examples": 50,
+        "churned": 0.3
+      },
+      {
+        "from": 60,
+        "to": 80,
+        "examples": 61,
+        "churned": 0.705
+      },
+      {
+        "from": 80,
+        "to": 100,
+        "examples": 27,
+        "churned": 0.778
+      }
+    ],
+    "recency_only_auc": 0.795
+  },
+  "feature_importance": {
+    "days_since_last_rental": 0.457,
+    "customer_tenure_days": 0.18,
+    "avg_days_between_rentals": 0.133,
+    "late_return_rate": 0.125,
+    "total_rentals_completed": 0.079,
+    "preferred_service_type": 0.026
+  }
+}
