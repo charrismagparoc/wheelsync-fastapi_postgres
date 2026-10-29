@@ -146,16 +146,14 @@ def _reachable_base(base: str) -> str:
 
 
 def send_verification_email(recipient: str, token: str, code: str = '') -> str:
-    """Send the account activation link and 6-digit code through the configured SMTP or Resend provider."""
+    """Send the account activation link through the configured SMTP or Resend provider."""
     settings = get_settings()
     base = settings.activation_base_url or _reachable_base(settings.public_base_url)
     activation_url = f"{base.rstrip('/')}/auth/verify-email?token={token}"
     text = (
         "Hello,\n\n"
         "Thank you for signing up with Pardz Car Rental.\n\n"
-        f"Your activation code is: {code}\n"
-        "Enter it on the Pardz Car Rental sign-in page (Activate with code). It works on any device.\n\n"
-        "Or open this link to activate your account:\n"
+        "Open this link to activate your account:\n"
         f"{activation_url}\n\n"
         "The link expires in 24 hours. If you did not create this account, you can ignore this email.\n\n"
         "Pardz Car Rental"
@@ -163,10 +161,7 @@ def send_verification_email(recipient: str, token: str, code: str = '') -> str:
     safe_url = escape(activation_url, quote=True)
     html = (
         "<p>Hello,</p>"
-        "<p>Thank you for signing up with Pardz Car Rental. Your activation code is:</p>"
-        f"<p style='margin:18px 0;font-size:30px;font-weight:bold;letter-spacing:8px;color:#1d5aa0'>{escape(code)}</p>"
-        "<p>Enter it on the sign-in page (<b>Activate with code</b>). It works on any device. "
-        "Or click the button below to activate your account.</p>"
+        "<p>Thank you for signing up with Pardz Car Rental. Click the button below to activate your account.</p>"
         "<p style='margin:26px 0'>"
         f"<a href='{safe_url}' style='display:inline-block;background:#1d5aa0;color:#ffffff;text-decoration:none;"
         "font-weight:bold;padding:14px 26px;border-radius:8px'>Activate my account</a></p>"
