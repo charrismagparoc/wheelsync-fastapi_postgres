@@ -22,8 +22,13 @@ from ..models import (
 from ..schemas import BookingCreate, InspectionCreate
 from . import notifications as notes
 from . import storage
+from .blacklist import id_blacklist_record
 
 OVERLAP_MESSAGE = "This vehicle is already reserved for part of the selected dates."
+BLACKLISTED_ID_MESSAGE = (
+    "Your ID number is on Pardz Car Rental's blacklist, so bookings are not available for this account. "
+    "Please contact Pardz Car Rental."
+)
 ACTIVE = (BookingStatus.accepted, BookingStatus.ongoing)
 
 
@@ -95,6 +100,8 @@ def _validate_booking_request(
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "Bookings cannot start in the past.")
     if customer.is_blacklisted:
         raise HTTPException(status.HTTP_403_FORBIDDEN, "This customer is currently restricted from making bookings.")
+    if id_blacklist_record(db, customer) is not None:
+        raise HTTPException(status.HTTP_403_FORBIDDEN, BLACKLISTED_ID_MESSAGE)
     if data.start_date == data.end_date and data.pickup_time and data.return_time and data.return_time <= data.pickup_time:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "Return time must be after pickup time for a same-day rental.")
     if data.service_type == "pickup_dropoff" and not (data.pickup_location or "").strip():
@@ -202,6 +209,13 @@ def accept_booking(db: Session, booking_id: uuid.UUID, staff_id: uuid.UUID, admi
         raise HTTPException(status.HTTP_409_CONFLICT, "This booking is no longer pending or rejected.")
     if booking.customer.verification_status != "verified":
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "Verify the customer's requirements before accepting this booking.")
+    # The ID may have been added to the blacklist after the customer sent the request.
+    record = id_blacklist_record(db, booking.customer)
+    if record is not None:
+        raise HTTPException(
+            status.HTTP_403_FORBIDDEN,
+            f"This customer's ID number is on the blacklist ({record.full_name}, {record.reason}). The booking can't be accepted.",
+        )
     staff = db.get(Profile, staff_id)
     if staff is None or staff.role != UserRole.staff:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "Choose a valid staff member to assign.")

@@ -20,7 +20,7 @@ from ..services import notifications as notes
 from ..services import storage
 from ..services import churn as churn_svc
 from ..ml import churn as churn_ml
-from ..services.blacklist import blacklist_matches
+from ..services.blacklist import blacklist_matches, record_with_id
 from ..services.phones import find_staff_by_phone, phone_digits
 from ..services.email import EmailDeliveryFailed, EmailNotConfigured, send_notification_email
 from ..services.synthetic import is_real_vehicle, on_real_vehicle
@@ -40,9 +40,12 @@ def list_customers(blacklisted: bool | None = None, db: Session = Depends(get_db
 
 @router.get("/customers/blacklist-matches", response_model=list[BlacklistMatchOut])
 def customer_blacklist_matches(db: Session = Depends(get_db)):
-    """Customer accounts whose name matches someone on Pardz's blacklist, so the admin can review them."""
+    """Customer accounts whose ID number or name matches someone on Pardz's blacklist."""
     customers = db.scalars(select(Profile).where(Profile.role == UserRole.customer)).all()
-    return [{"customer_id": customer_id, "record": record} for customer_id, record in blacklist_matches(db, customers).items()]
+    return [
+        {"customer_id": customer_id, "record": record, "matched_by": matched_by}
+        for customer_id, (record, matched_by) in blacklist_matches(db, customers).items()
+    ]
 
 
 # ------------------------------------------------------------------ blacklist records (Pardz's list)
@@ -52,11 +55,22 @@ def list_blacklist_records(db: Session = Depends(get_db)):
 
 
 def _describe_record(record: BlacklistRecord) -> str:
-    return f"{record.full_name} ({record.reason})"
+    id_part = f", ID {record.id_number}" if record.id_number else ""
+    return f"{record.full_name} ({record.reason}{id_part})"
+
+
+def _assert_unique_id(db: Session, data: BlacklistRecordIn, exclude=None) -> None:
+    other = record_with_id(db, data.id_number, exclude=exclude)
+    if other is not None:
+        raise HTTPException(status.HTTP_409_CONFLICT, f"ID number {data.id_number} is already on the blacklist ({other.full_name}).")
 
 
 @router.post("/blacklist-records", response_model=BlacklistRecordOut, status_code=status.HTTP_201_CREATED)
 def create_blacklist_record(data: BlacklistRecordIn, admin: Profile = Depends(require_admin), db: Session = Depends(get_db)):
+    # New records need an ID number; only the records loaded from Pardz's printed list may be without one.
+    if not data.id_number:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "Enter the person's ID number.")
+    _assert_unique_id(db, data)
     record = BlacklistRecord(**data.model_dump())
     db.add(record)
     db.commit()
@@ -75,6 +89,9 @@ def _record_or_404(db: Session, record_id: str) -> BlacklistRecord:
 def edit_blacklist_record(record_id: str, data: BlacklistRecordIn, admin: Profile = Depends(require_admin), db: Session = Depends(get_db)):
     record = _record_or_404(db, record_id)
     before = _describe_record(record)
+    if record.id_number and not data.id_number:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "The ID number can't be removed from this record.")
+    _assert_unique_id(db, data, exclude=record.id)
     for key, value in data.model_dump().items():
         setattr(record, key, value)
     db.commit()

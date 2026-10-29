@@ -72,6 +72,12 @@ def init_db() -> None:
         conn.exec_driver_sql("UPDATE locations SET is_active = true WHERE is_active = false")
         conn.exec_driver_sql("ALTER TABLE profiles ADD COLUMN IF NOT EXISTS is_imported boolean NOT NULL DEFAULT false")
         conn.exec_driver_sql("ALTER TABLE profiles ADD COLUMN IF NOT EXISTS email_verification_code_hash varchar(64)")
+        # Blacklist records are identified by ID number: one record per ID, ignoring spaces, dashes and letter case.
+        conn.exec_driver_sql("ALTER TABLE blacklist_records ADD COLUMN IF NOT EXISTS id_number text")
+        conn.exec_driver_sql(
+            "CREATE UNIQUE INDEX IF NOT EXISTS blacklist_records_id_number_key ON blacklist_records "
+            "(upper(regexp_replace(id_number, '[^A-Za-z0-9]', '', 'g'))) WHERE id_number IS NOT NULL"
+        )
         # "SAN FRANCE" on the price sheet is San Francisco, Agusan del Sur (between Bayugan and Trento).
         conn.exec_driver_sql(
             "UPDATE locations SET name = 'San Francisco' WHERE name = 'San France' "

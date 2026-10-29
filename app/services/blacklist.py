@@ -137,13 +137,49 @@ def names_match(record: list[str], person: list[str]) -> bool:
     return shorter[0] == longer[0] and set(shorter) <= set(longer)
 
 
+def normalize_id(value: str | None) -> str:
+    """ID numbers compared without spaces, dashes or letter case: 'n01-23 456789' -> 'N0123456789'."""
+    return re.sub(r"[^A-Za-z0-9]", "", value or "").upper()
+
+
+def customer_ids(customer: Profile) -> set[str]:
+    return {n for n in (normalize_id(customer.id_number), normalize_id(customer.second_id_number)) if n}
+
+
+def _records_with_ids(db: Session) -> list[BlacklistRecord]:
+    return db.scalars(select(BlacklistRecord).where(BlacklistRecord.id_number.is_not(None))).all()
+
+
+def record_with_id(db: Session, id_number: str | None, *, exclude=None) -> BlacklistRecord | None:
+    """The record that already has this ID number (blacklist ID numbers are unique)."""
+    wanted = normalize_id(id_number)
+    if not wanted:
+        return None
+    return next((r for r in _records_with_ids(db) if r.id != exclude and normalize_id(r.id_number) == wanted), None)
+
+
+def id_blacklist_record(db: Session, customer: Profile) -> BlacklistRecord | None:
+    """The blacklist record whose ID number is one of the customer's two IDs. Such a customer cannot book."""
+    ids = customer_ids(customer)
+    if not ids:
+        return None
+    return next((r for r in _records_with_ids(db) if normalize_id(r.id_number) in ids), None)
+
+
 def blacklist_matches(db: Session, customers: list[Profile]) -> dict:
-    """{customer id: the blacklist record their name matches}."""
-    records = [(name_tokens(r.full_name), r) for r in db.scalars(select(BlacklistRecord)).all()]
+    """{customer id: (record, "id_number" or "name")}. An ID number match is certain; a name match only
+    means the admin should check (two people can share a name)."""
+    all_records = db.scalars(select(BlacklistRecord)).all()
+    by_id = {normalize_id(r.id_number): r for r in all_records if normalize_id(r.id_number)}
+    by_name = [(name_tokens(r.full_name), r) for r in all_records]
     found = {}
     for customer in customers:
-        person = name_tokens(customer.full_name)
-        record = next((r for tokens, r in records if names_match(tokens, person)), None)
+        record = next((by_id[n] for n in customer_ids(customer) if n in by_id), None)
         if record is not None:
-            found[customer.id] = record
+            found[customer.id] = (record, "id_number")
+            continue
+        person = name_tokens(customer.full_name)
+        record = next((r for tokens, r in by_name if names_match(tokens, person)), None)
+        if record is not None:
+            found[customer.id] = (record, "name")
     return found

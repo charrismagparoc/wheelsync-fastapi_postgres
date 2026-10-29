@@ -135,6 +135,7 @@ class BlacklistIn(BaseModel):
 
 class BlacklistRecordIn(BaseModel):
     full_name: str = Field(min_length=1, max_length=200)
+    id_number: str | None = Field(default=None, max_length=100)
     area: str | None = Field(default=None, max_length=50)
     source: str | None = Field(default=None, max_length=50)
     reason: str = Field(min_length=1, max_length=200)
@@ -148,6 +149,11 @@ class BlacklistRecordIn(BaseModel):
             raise ValueError("This field is required")
         return v
 
+    @field_validator("id_number")
+    @classmethod
+    def _optional_id(cls, v: str | None) -> str | None:
+        return (v or "").strip() or None
+
     @field_validator("area", "source", "notes")
     @classmethod
     def _optional_text(cls, v: str | None) -> str | None:
@@ -157,6 +163,7 @@ class BlacklistRecordIn(BaseModel):
 class BlacklistRecordOut(ORM):
     id: uuid.UUID
     full_name: str
+    id_number: str | None
     area: str | None
     source: str | None
     reason: str
@@ -165,9 +172,10 @@ class BlacklistRecordOut(ORM):
 
 
 class BlacklistMatchOut(BaseModel):
-    """A customer account whose name matches a record on Pardz's blacklist."""
+    """A customer account whose ID number (or, if not, name) matches a record on Pardz's blacklist."""
 
     customer_id: uuid.UUID
+    matched_by: Literal["id_number", "name"]
     record: BlacklistRecordOut
 
 

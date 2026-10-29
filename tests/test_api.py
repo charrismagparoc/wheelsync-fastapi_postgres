@@ -881,9 +881,13 @@ def test_vehicle_photo_accepts_any_image_type(client, world):
 def test_blacklist_records_flag_matching_customers(client, world):
     admin = auth(world["admin"])
     r = client.post("/admin/blacklist-records", headers=admin, json={"full_name": "Testy M. Renterson", "area": "CDO", "source": "RN", "reason": "Payment Issue"})
+    assert r.status_code == 400  # new records need an ID number
+    r = client.post("/admin/blacklist-records", headers=admin, json={"full_name": "Testy M. Renterson", "id_number": "X999", "area": "CDO", "source": "RN", "reason": "Payment Issue"})
     assert r.status_code == 201, r.text
     record_id = r.json()["id"]
-    assert client.post("/admin/blacklist-records", headers=admin, json={"full_name": " ", "reason": "Scammer"}).status_code == 422
+    assert client.post("/admin/blacklist-records", headers=admin, json={"full_name": " ", "id_number": "X1", "reason": "Scammer"}).status_code == 422
+    r = client.patch(f"/admin/blacklist-records/{record_id}", headers=admin, json={"full_name": "Testy M. Renterson", "reason": "Scammer"})
+    assert r.status_code == 400  # the ID number stays
     assert client.get("/admin/blacklist-records", headers=auth(world["cust"])).status_code == 403
 
     # Same name without the middle initial is flagged; the unrelated customer is not.
@@ -893,11 +897,38 @@ def test_blacklist_records_flag_matching_customers(client, world):
     customers = {c["id"]: c["full_name"] for c in client.get("/admin/customers", headers=admin).json()}
     assert customers[matches[0]["customer_id"]] == "Testy Renterson"
 
-    r = client.patch(f"/admin/blacklist-records/{record_id}", headers=admin, json={"full_name": "Testy M. Renterson", "area": "CDO", "source": "RN", "reason": "Scammer"})
+    r = client.patch(f"/admin/blacklist-records/{record_id}", headers=admin, json={"full_name": "Testy M. Renterson", "id_number": "X999", "area": "CDO", "source": "RN", "reason": "Scammer"})
     assert r.status_code == 200 and r.json()["reason"] == "Scammer"
     assert client.delete(f"/admin/blacklist-records/{record_id}", headers=admin).status_code == 204
     assert client.get("/admin/customers/blacklist-matches", headers=admin).json() == []
     assert client.get("/admin/audit-logs", headers=admin, params={"q": "blacklist record"}).json()
+
+
+def test_blacklisted_id_number_cannot_book(client, world):
+    admin = auth(world["admin"])
+    verify_customer(client, world)  # IDs P123 and N456
+    pending = make_booking(client, world, 1, 2)
+    assert pending.status_code == 201, pending.text
+
+    # The second ID, typed with a dash and lower case, still matches; a name that differs doesn't matter.
+    r = client.post("/admin/blacklist-records", headers=admin, json={"full_name": "Someone Else", "id_number": "n-456", "reason": "Scammer"})
+    assert r.status_code == 201, r.text
+    assert r.json()["id_number"] == "n-456"
+    record_id = r.json()["id"]
+    dup = client.post("/admin/blacklist-records", headers=admin, json={"full_name": "Another Person", "id_number": "N 456", "reason": "Bad Renter"})
+    assert dup.status_code == 409
+
+    matches = client.get("/admin/customers/blacklist-matches", headers=admin).json()
+    assert [(m["matched_by"], m["record"]["full_name"]) for m in matches] == [("id_number", "Someone Else")]
+
+    blocked = make_booking(client, world, 4, 5)
+    assert blocked.status_code == 403 and "blacklist" in blocked.json()["detail"]
+    # A request sent before the ID was listed can't be accepted either.
+    r = client.post(f"/bookings/{pending.json()['id']}/accept", headers=admin, json={"staff_id": world["staff_id"]})
+    assert r.status_code == 403
+
+    assert client.delete(f"/admin/blacklist-records/{record_id}", headers=admin).status_code == 204
+    assert make_booking(client, world, 4, 5).status_code == 201
 
 
 def test_blacklist_name_matching():

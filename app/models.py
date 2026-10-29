@@ -268,12 +268,14 @@ class SeedRun(Base):
 
 class BlacklistRecord(Base):
     """A person on Pardz's blacklist (the shared renters' list): not necessarily a WheelSync account.
-    Customer accounts whose name matches a record are flagged for the admin."""
+    A customer whose ID number matches a record cannot book; a name-only match is flagged for the admin."""
 
     __tablename__ = "blacklist_records"
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     full_name: Mapped[str] = mapped_column(Text)
+    # ID number (license, passport...) as written; unique, compared without spaces, dashes or letter case.
+    id_number: Mapped[str | None] = mapped_column(Text)
     area: Mapped[str | None] = mapped_column(Text)  # CDO, CEB, DVO
     source: Mapped[str | None] = mapped_column(Text)  # RN or FB, as written on the list
     reason: Mapped[str] = mapped_column(Text)  # Bad Renter, Payment Issue, Scammer...
