@@ -110,10 +110,10 @@ def _validate_booking_request(
     vehicle = db.get(Vehicle, data.vehicle_id)
     if vehicle is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Vehicle not found")
+    # Only maintenance takes a car off the list. A rented or returned car can still be booked for free dates;
+    # the dates of other rentals are blocked below.
     if vehicle.status == VehicleStatus.maintenance:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "This vehicle is currently under maintenance.")
-    if vehicle.status == VehicleStatus.cleaning:
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "This vehicle was just returned and is being inspected and cleaned.")
     # Dates already taken by an accepted or ongoing booking can't be requested again.
     clash_query = select(Booking.id).where(
         Booking.vehicle_id == vehicle.id,
@@ -286,7 +286,7 @@ def start_rental(db: Session, booking_id: uuid.UUID, user: Profile) -> Booking:
     if booking.status != BookingStatus.accepted:
         raise HTTPException(status.HTTP_409_CONFLICT, "Only accepted bookings can be started.")
     booking.status = BookingStatus.ongoing
-    if booking.vehicle.status == VehicleStatus.available:
+    if booking.vehicle.status in (VehicleStatus.available, VehicleStatus.cleaning):
         booking.vehicle.status = VehicleStatus.rented
     db.flush()
     users = notes.notify_booking_status_change(db, booking, get_settings().rental_address)

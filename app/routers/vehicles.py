@@ -31,13 +31,14 @@ def _plain(value):
 
 @router.get("")
 def list_vehicles(user: Profile | None = Depends(get_optional_current_user), db: Session = Depends(get_db)):
-    """Public visitors and customers see available cars without pricing; admins see the full fleet.
+    """Public visitors and customers see every car except those under maintenance, without pricing; admins see
+    the full fleet. A rented car stays listed: only its booked dates are blocked (see /unavailable-dates).
     Synthetic test vehicles are left out for everyone (see services/synthetic.py)."""
     if user is not None and user.role == UserRole.admin:
         rows = db.scalars(select(Vehicle).where(is_real_vehicle()).order_by(Vehicle.created_at.desc())).all()
         return [VehicleAdminOut.model_validate(v) for v in rows]
     rows = db.scalars(
-        select(Vehicle).where(Vehicle.status == VehicleStatus.available, is_real_vehicle()).order_by(Vehicle.make, Vehicle.model)
+        select(Vehicle).where(Vehicle.status != VehicleStatus.maintenance, is_real_vehicle()).order_by(Vehicle.make, Vehicle.model)
     ).all()
     return [VehicleCustomerOut.model_validate(v) for v in rows]
 

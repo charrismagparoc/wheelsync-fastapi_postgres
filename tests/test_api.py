@@ -232,6 +232,11 @@ def test_vehicle_views_and_rules(client, world):
     assert make_booking(client, world).status_code == 400  # maintenance blocks booking
     client.patch(f"/vehicles/{vid}", headers=auth(world["admin"]), json={"status": "available"})
 
+    # A rented car stays listed for customers; only maintenance hides it.
+    client.patch(f"/vehicles/{vid}", headers=auth(world["admin"]), json={"status": "rented"})
+    assert [v["id"] for v in client.get("/vehicles", headers=auth(world["cust"])).json()] == [vid]
+    client.patch(f"/vehicles/{vid}", headers=auth(world["admin"]), json={"status": "available"})
+
     up = client.post("/vehicles/images", headers=auth(world["admin"]), files={"file": ("car.png", io.BytesIO(PNG), "image/png")})
     assert up.status_code == 200
     url = up.json()["image_url"]
