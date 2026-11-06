@@ -5,7 +5,7 @@ from decimal import Decimal
 
 from sqlalchemy import (
     Boolean, CheckConstraint, Date, DateTime, Enum, ForeignKey, Index, Integer,
-    Numeric, String, Text, Time, func, text,
+    LargeBinary, Numeric, String, Text, Time, func, text,
 )
 from sqlalchemy.dialects.postgresql import ExcludeConstraint, JSONB, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
@@ -351,4 +351,17 @@ class AuditLog(Base):
     entity: Mapped[str | None] = mapped_column(Text)
     entity_id: Mapped[str | None] = mapped_column(Text)
     summary: Mapped[str] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class StoredFile(Base):
+    """Uploaded files (vehicle photos, customer documents, inspection photos). Kept in the database so they last
+    as long as the rest of the data: hosts like Render wipe the server's disk on every restart and redeploy."""
+
+    __tablename__ = "stored_files"
+
+    bucket: Mapped[str] = mapped_column(String(40), primary_key=True)  # vehicle-images, customer-documents, ...
+    path: Mapped[str] = mapped_column(Text, primary_key=True)  # bucket-relative, e.g. <user id>/<uuid>.jpg
+    content_type: Mapped[str] = mapped_column(String(100))
+    data: Mapped[bytes] = mapped_column(LargeBinary)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())

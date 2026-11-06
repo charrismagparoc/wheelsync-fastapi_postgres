@@ -1,8 +1,12 @@
-"""Local-disk file storage.
+"""File storage in PostgreSQL (the stored_files table).
 
-  uploads/vehicle-images/<name>            public
-  uploads/customer-documents/<user>/<name> private, only reachable through short-lived signed links
-  uploads/inspection-photos/<booking>/<name> private, same signed links (damage photos from the staff app)
+  vehicle-images/<name>              public
+  customer-documents/<user>/<name>   private, only reachable through short-lived signed links
+  inspection-photos/<booking>/<name> private, same signed links (damage photos from the staff app)
+
+Files live in the database, so they last as long as the rest of the data. They used to be written to the server's
+disk, which hosts like Render wipe on every restart and redeploy: the database still pointed to the files, but the
+files were gone ("Document not found"). Files an older version saved on disk under UPLOAD_DIR are still read.
 
 To move to S3/GCS later, only this module needs to change.
 """
@@ -11,8 +15,11 @@ import uuid
 from pathlib import Path
 
 from fastapi import HTTPException, UploadFile, status
+from sqlalchemy import delete, insert, select
 
 from ..config import get_settings
+from ..database import engine
+from ..models import StoredFile
 
 VEHICLE_BUCKET = "vehicle-images"
 DOCUMENT_BUCKET = "customer-documents"
@@ -20,6 +27,7 @@ INSPECTION_BUCKET = "inspection-photos"
 
 IMAGE_TYPES = {"image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/gif": "gif"}
 DOCUMENT_TYPES = {**IMAGE_TYPES, "application/pdf": "pdf"}
+CONTENT_TYPES = {ext: mime for mime, ext in DOCUMENT_TYPES.items()}  # "jpg" -> "image/jpeg", "pdf" -> ...
 
 
 def _root() -> Path:
@@ -35,6 +43,38 @@ def safe_path(bucket: str, relative: str) -> Path:
     if base != target and base not in target.parents:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "Invalid file path")
     return target
+
+
+def _content_type(relative: str) -> str:
+    return CONTENT_TYPES.get(relative.rsplit(".", 1)[-1].lower(), "application/octet-stream")
+
+
+def _store(bucket: str, relative: str, data: bytes) -> str:
+    safe_path(bucket, relative)  # same path rules as before: nothing may point outside its bucket
+    with engine.begin() as conn:
+        conn.execute(insert(StoredFile).values(bucket=bucket, path=relative, content_type=_content_type(relative), data=data))
+    return relative
+
+
+def read_file(bucket: str, relative: str) -> tuple[bytes, str] | None:
+    """The file's bytes and content type, or None when the file does not exist."""
+    target = safe_path(bucket, relative)
+    with engine.connect() as conn:
+        row = conn.execute(
+            select(StoredFile.data, StoredFile.content_type).where(StoredFile.bucket == bucket, StoredFile.path == relative)
+        ).first()
+    if row is not None:
+        return bytes(row.data), row.content_type
+    if target.is_file():  # saved on disk by an older version
+        return target.read_bytes(), _content_type(relative)
+    return None
+
+
+def file_exists(bucket: str, relative: str) -> bool:
+    target = safe_path(bucket, relative)
+    with engine.connect() as conn:
+        found = conn.execute(select(StoredFile.path).where(StoredFile.bucket == bucket, StoredFile.path == relative)).first()
+    return found is not None or target.is_file()
 
 
 def sniff_type(data: bytes) -> str | None:
@@ -71,10 +111,7 @@ def save_upload(bucket: str, file: UploadFile, subdir: str = "", allowed: dict[s
         raise HTTPException(status.HTTP_400_BAD_REQUEST, f"This file is not a valid photo or document. Allowed: {kinds}.")
 
     relative = f"{subdir}/{uuid.uuid4()}.{ext}" if subdir else f"{uuid.uuid4()}.{ext}"
-    target = safe_path(bucket, relative)
-    target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_bytes(data)
-    return relative
+    return _store(bucket, relative, data)
 
 
 def save_photo(bucket: str, file: UploadFile) -> str:
@@ -89,11 +126,7 @@ def save_photo(bucket: str, file: UploadFile) -> str:
     ext = IMAGE_TYPES.get(sniff_type(data) or "")
     if ext is None:
         data, ext = _convert_to_jpeg(data), "jpg"
-    relative = f"{uuid.uuid4()}.{ext}"
-    target = safe_path(bucket, relative)
-    target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_bytes(data)
-    return relative
+    return _store(bucket, f"{uuid.uuid4()}.{ext}", data)
 
 
 def _convert_to_jpeg(data: bytes) -> bytes:
@@ -119,6 +152,9 @@ def delete_file(bucket: str, relative: str | None) -> None:
     if not relative:
         return
     try:
-        safe_path(bucket, relative).unlink(missing_ok=True)
+        target = safe_path(bucket, relative)
     except HTTPException:
-        pass
+        return
+    with engine.begin() as conn:
+        conn.execute(delete(StoredFile).where(StoredFile.bucket == bucket, StoredFile.path == relative))
+    target.unlink(missing_ok=True)  # an older version may have saved it on disk

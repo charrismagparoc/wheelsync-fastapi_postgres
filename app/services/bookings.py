@@ -322,7 +322,7 @@ def complete_rental(db: Session, booking_id: uuid.UUID, user: Profile) -> Bookin
 def _checked_photos(booking: Booking, photos: list[str]) -> list[str]:
     """Only accept photos that were uploaded for this booking."""
     for path in photos:
-        if not path.startswith(f"{booking.id}/") or not storage.safe_path(storage.INSPECTION_BUCKET, path).is_file():
+        if not path.startswith(f"{booking.id}/") or not storage.file_exists(storage.INSPECTION_BUCKET, path):
             raise HTTPException(status.HTTP_400_BAD_REQUEST, "One of the photos was not uploaded for this booking. Take it again.")
     return list(dict.fromkeys(photos))
 
