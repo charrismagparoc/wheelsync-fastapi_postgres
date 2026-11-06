@@ -976,11 +976,22 @@ def test_company_data_loads_once_and_deletions_stay_deleted(client, world, monke
 
 def test_customer_with_active_booking_cannot_be_deleted(client, world):
     verify_customer(client, world)
-    assert make_booking(client, world).status_code == 201
+    r = make_booking(client, world)
+    assert r.status_code == 201
+    bid = r.json()["id"]
+    assert client.post(f"/bookings/{bid}/accept", headers=auth(world["admin"]), json={"staff_id": world["staff_id"]}).status_code == 200
     cid = customer_id(client, world["admin"])
     r = client.delete(f"/admin/customers/{cid}", headers=auth(world["admin"]))
-    assert r.status_code == 409 and "pending, accepted or ongoing" in r.json()["detail"]
+    assert r.status_code == 409 and "accepted or ongoing" in r.json()["detail"] and "accepted:" in r.json()["detail"]
     assert client.delete(f"/admin/customers/{cid}", headers=auth(world["staff"])).status_code == 403
+
+
+def test_customer_with_only_a_pending_request_can_be_deleted(client, world):
+    # Customers can send a request before they are verified; the request goes with them.
+    assert make_booking(client, world).status_code == 201
+    cid = customer_id(client, world["admin"])
+    assert client.delete(f"/admin/customers/{cid}", headers=auth(world["admin"])).status_code == 204
+    assert cid not in {c["id"] for c in client.get("/admin/customers", headers=auth(world["admin"])).json()}
 
 
 def test_churn_random_forest_trains_and_predicts(client, world, monkeypatch, tmp_path):

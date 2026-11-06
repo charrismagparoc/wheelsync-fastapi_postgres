@@ -163,9 +163,23 @@ def delete_customer(customer_id: str, admin: Profile = Depends(require_admin), d
     """Delete a customer and their booking history for good (also past customers from the company records:
     they are loaded only once, so they don't come back after a restart or deploy)."""
     customer = _customer_or_404(db, customer_id)
-    active = [BookingStatus.pending, BookingStatus.accepted, BookingStatus.ongoing]
-    if db.scalar(select(func.count(Booking.id)).where(Booking.customer_id == customer.id, Booking.status.in_(active))):
-        raise HTTPException(status.HTTP_409_CONFLICT, "This customer has a pending, accepted or ongoing booking. Finish or cancel it before deleting the customer.")
+    # A pending booking is only a request (customers can send one before they are verified), so it is deleted with
+    # the customer. Accepted and ongoing bookings have a car reserved or out, and must be finished or cancelled first.
+    active = [BookingStatus.accepted, BookingStatus.ongoing]
+    blocking = db.scalars(
+        select(Booking).where(Booking.customer_id == customer.id, Booking.status.in_(active)).order_by(Booking.start_date)
+    ).all()
+    if blocking:
+        # Name the bookings, so the admin can find them on the Bookings page.
+        listed = "; ".join(
+            f"{b.status.value}: {b.vehicle.make} {b.vehicle.model} ({b.vehicle.plate_number}), {b.start_date} to {b.end_date}"
+            for b in blocking[:3]
+        ) + (f"; and {len(blocking) - 3} more" if len(blocking) > 3 else "")
+        raise HTTPException(
+            status.HTTP_409_CONFLICT,
+            f"{customer.full_name} still has an accepted or ongoing booking ({listed}). "
+            "Complete or cancel it on the Bookings page before deleting the customer.",
+        )
     rentals = db.scalar(select(func.count(Booking.id)).where(Booking.customer_id == customer.id))
     summary = f"Deleted customer {customer.full_name} ({customer.email or customer.phone or 'no contact'}) and {rentals} booking(s)"
     db.execute(delete(Profile).where(Profile.id == customer.id))  # bookings, inspections and notifications cascade
