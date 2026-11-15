@@ -31,9 +31,8 @@ CONTENT_TYPES = {ext: mime for mime, ext in DOCUMENT_TYPES.items()}  # "jpg" -> 
 
 
 def _root() -> Path:
-    root = Path(get_settings().upload_dir).resolve()
-    root.mkdir(parents=True, exist_ok=True)
-    return root
+    # Only computes the path. It does NOT create folders: Vercel's disk is read-only.
+    return Path(get_settings().upload_dir).resolve()
 
 
 def safe_path(bucket: str, relative: str) -> Path:
