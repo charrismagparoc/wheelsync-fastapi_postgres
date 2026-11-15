@@ -12,14 +12,21 @@ Only dates whose 180-day window is fully inside the history are used, so every l
 
 The split is stratified 80/20 and the 5-fold cross-validation is stratified too; both keep all snapshots of
 one customer on the same side, so the test score is measured on customers the model has never seen.
+
+The trained model and its report are saved in the database (stored_files), so retraining also works on Vercel,
+whose code folder is read-only. The model file shipped with the code is only used before the first retrain.
 """
+import io
 import json
+import time
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import joblib
 import numpy as np
+
+from ..services import storage
 
 CHURN_WINDOW_DAYS = 180
 SNAPSHOT_STEP_DAYS = 30
@@ -35,9 +42,17 @@ FEATURES = [
 ]
 SERVICE_CODES = {"self_drive": 0, "with_driver": 1, "pickup_dropoff": 2}
 
+# Where the trained model lives: the database (stored_files), under this bucket.
+MODEL_BUCKET = "ml-models"
+MODEL_NAME = "churn_model.joblib"
+REPORT_NAME = "churn_model.json"
+
+# Copies shipped with the code. Only read if nothing is saved in the database yet.
 MODEL_DIR = Path(__file__).resolve().parent
-MODEL_FILE = MODEL_DIR / "churn_model.joblib"
-REPORT_FILE = MODEL_DIR / "churn_model.json"
+SHIPPED_MODEL_FILE = MODEL_DIR / MODEL_NAME
+SHIPPED_REPORT_FILE = MODEL_DIR / REPORT_NAME
+
+CACHE_SECONDS = 300  # how long a loaded model is kept before it is read from the database again
 
 
 @dataclass
@@ -104,7 +119,7 @@ def build_training_set(rentals: list[Rental]):
 
 
 def train(rentals: list[Rental]) -> dict:
-    """Train, evaluate and save the model. Returns the evaluation report (also saved next to the model)."""
+    """Train, evaluate and save the model in the database. Returns the evaluation report."""
     from sklearn.ensemble import RandomForestClassifier
     from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, roc_auc_score
     from sklearn.model_selection import StratifiedGroupKFold, cross_val_predict
@@ -178,8 +193,12 @@ def train(rentals: list[Rental]) -> dict:
             for name, value in sorted(zip(FEATURES, final.feature_importances_), key=lambda item: -item[1])
         },
     }
-    joblib.dump(final, MODEL_FILE)
-    REPORT_FILE.write_text(json.dumps(report, indent=2), encoding="utf-8")
+
+    # Save to the database instead of the code folder (which is read-only on Vercel).
+    model_bytes = io.BytesIO()
+    joblib.dump(final, model_bytes)
+    storage.put_file(MODEL_BUCKET, MODEL_NAME, model_bytes.getvalue(), "application/octet-stream")
+    storage.put_file(MODEL_BUCKET, REPORT_NAME, json.dumps(report, indent=2).encode("utf-8"), "application/json")
     _cache.clear()
     return report
 
@@ -187,17 +206,30 @@ def train(rentals: list[Rental]) -> dict:
 _cache: dict = {}
 
 
+def _load_saved_model():
+    stored = storage.read_file(MODEL_BUCKET, MODEL_NAME)
+    if stored is not None:
+        return joblib.load(io.BytesIO(stored[0]))
+    if SHIPPED_MODEL_FILE.exists():  # the copy shipped with the code, before the first retrain
+        return joblib.load(SHIPPED_MODEL_FILE)
+    return None
+
+
 def load_model():
-    """The saved model; reloaded when the file changes (e.g. retrained by the script while the server runs)."""
-    stamp = MODEL_FILE.stat().st_mtime_ns if MODEL_FILE.exists() else None
-    if _cache.get("stamp") != stamp or "model" not in _cache:
-        _cache["model"] = joblib.load(MODEL_FILE) if stamp else None
-        _cache["stamp"] = stamp
+    """The saved model. Read from the database, and checked again after CACHE_SECONDS."""
+    if "model" not in _cache or time.time() - _cache.get("loaded_at", 0) > CACHE_SECONDS:
+        _cache["model"] = _load_saved_model()
+        _cache["loaded_at"] = time.time()
     return _cache["model"]
 
 
 def load_report() -> dict | None:
-    return json.loads(REPORT_FILE.read_text(encoding="utf-8")) if REPORT_FILE.exists() else None
+    stored = storage.read_file(MODEL_BUCKET, REPORT_NAME)
+    if stored is not None:
+        return json.loads(stored[0].decode("utf-8"))
+    if SHIPPED_REPORT_FILE.exists():
+        return json.loads(SHIPPED_REPORT_FILE.read_text(encoding="utf-8"))
+    return None
 
 
 def risk_threshold() -> float:
