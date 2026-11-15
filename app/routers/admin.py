@@ -446,8 +446,8 @@ def dashboard(year: int | None = Query(default=None, ge=2000, le=2100), db: Sess
 def fleet_calendar(start: date, end: date, db: Session = Depends(get_db)):
     """Which car is taken on which days between `start` and `end`, for the dashboard calendar.
 
-    pending = a booking request waiting for the admin; rented = an accepted, ongoing or completed booking,
-    or a rental recorded on the Transactions page.
+    pending = a booking request waiting for the admin; rented = an accepted, ongoing or completed booking.
+    Recorded payments on the Transactions page are not included: they are payment records, not bookings.
     """
     if end < start or (end - start).days > 62:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "Choose a range of at most two months.")
@@ -457,11 +457,6 @@ def fleet_calendar(start: date, end: date, db: Session = Depends(get_db)):
     bookings = db.scalars(
         booking_svc.booking_query().where(
             Booking.vehicle_id.in_(ids), Booking.status.in_(taken), Booking.start_date <= end, Booking.end_date >= start,
-        )
-    ).all()
-    recorded = db.scalars(
-        select(WalkInTransaction).where(
-            WalkInTransaction.vehicle_id.in_(ids), WalkInTransaction.start_date <= end, WalkInTransaction.end_date >= start,
         )
     ).all()
     entries = [
@@ -477,16 +472,6 @@ def fleet_calendar(start: date, end: date, db: Session = Depends(get_db)):
             "requested_at": b.created_at,
         }
         for b in bookings
-    ] + [
-        {
-            "vehicle_id": t.vehicle_id, "start_date": t.start_date, "end_date": t.end_date,
-            "kind": "rented", "status": "recorded", "customer": t.customer_name, "booking_id": None, "transaction_id": t.id,
-            "phone": t.customer_phone, "email": None, "verification": None, "pickup_time": None, "return_time": None,
-            "service_type": t.service_type, "destination": t.destination, "pickup_location": None, "staff": None,
-            "actual_return_date": None, "late_return": False, "notes": t.notes, "requested_at": t.created_at,
-            "amount": float(t.amount), "payment_method": t.payment_method,
-        }
-        for t in recorded
     ]
     return {
         "vehicles": [
