@@ -25,8 +25,11 @@ class Settings(BaseSettings):
     max_upload_mb: int = 10
 
     timezone: str = "Asia/Manila"
-    # How often the server checks for 2-hour / 30-minute return reminders. 0 turns the check off.
-    reminder_interval_seconds: int = 60
+    # In-server reminder loop. 0 (the default) turns it off, which is required on Vercel. Reminders then run
+    # through the protected endpoint POST /internal/run-reminders, called every minute by an external scheduler.
+    reminder_interval_seconds: int = 0
+    # Secret that the external scheduler sends in the X-Cron-Secret header. Empty means the endpoint is disabled.
+    cron_secret: str | None = None
     # Load Pardz's past rental history (app/data/rental_history.csv) into a new database. Loaded once only.
     seed_rental_history: bool = True
     rental_address: str = "Zone 7, Kauswagan Highway, Cagayan de Oro City"
