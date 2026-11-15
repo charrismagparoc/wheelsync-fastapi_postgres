@@ -1,9 +1,10 @@
 import asyncio
 import logging
+import secrets
 from contextlib import asynccontextmanager
 
 import jwt
-from fastapi import Depends, FastAPI, Query, WebSocket, WebSocketDisconnect
+from fastapi import Depends, FastAPI, Header, HTTPException, Query, WebSocket, WebSocketDisconnect, status
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
@@ -32,7 +33,7 @@ def _run_reminders_once() -> None:
 
 
 async def _reminder_loop(interval: int) -> None:
-    """Checks every `interval` seconds for rentals due back in 2 hours or 30 minutes."""
+    """Checks every `interval` seconds for rentals due back in 2 hours or 30 minutes (local servers only)."""
     while True:
         try:
             await asyncio.to_thread(_run_reminders_once)
@@ -83,9 +84,19 @@ def health(db: Session = Depends(get_db)):
     return {"status": "ok"}
 
 
+@app.post("/internal/run-reminders", tags=["meta"])
+async def run_reminders(x_cron_secret: str | None = Header(default=None)):
+    """Sends the 2-hour and 30-minute return reminders. Called every minute by an external scheduler."""
+    expected = get_settings().cron_secret
+    if not expected or not x_cron_secret or not secrets.compare_digest(x_cron_secret, expected):
+        raise HTTPException(status.HTTP_403_FORBIDDEN, "Forbidden")
+    await asyncio.to_thread(_run_reminders_once)
+    return {"status": "ok"}
+
+
 @app.websocket("/ws")
 async def realtime_socket(ws: WebSocket, token: str = Query(...)):
-    """Live "something changed" pings. See app/realtime.py."""
+    """Live "something changed" pings. Kept for older app versions; the apps now poll instead."""
     try:
         user_id = decode_access_token(token)
     except (jwt.PyJWTError, ValueError, KeyError):
