@@ -12,7 +12,10 @@ from ..realtime import hub
 from ..schemas import ExtensionIn, WalkInIn, WalkInOut
 from ..services import audit
 from ..services.bookings import today_local
-from ..services.fleet import assert_vehicle_free, sync_rented_status
+from ..services.fleet import sync_rented_status
+
+# Transactions are payment records only. They are saved without checking whether the vehicle is booked
+# on those dates: the booking rules are enforced on the Bookings page, not here.
 
 router = APIRouter(prefix="/admin/transactions", tags=["transactions"], dependencies=[Depends(require_admin)])
 
@@ -75,7 +78,6 @@ def _get(db: Session, transaction_id: str) -> WalkInTransaction:
 @router.post("", response_model=WalkInOut, status_code=status.HTTP_201_CREATED)
 def create_transaction(data: WalkInIn, admin: Profile = Depends(require_admin), db: Session = Depends(get_db)):
     vehicle, label = _vehicle_label(db, data)
-    assert_vehicle_free(db, vehicle.id if vehicle else None, data.start_date, data.end_date)
     transaction = WalkInTransaction(created_by=admin.id)
     _fill(transaction, data, vehicle, label)
     db.add(transaction)
@@ -101,7 +103,6 @@ def update_transaction(transaction_id: str, data: WalkInIn, admin: Profile = Dep
         )
     before = f"{transaction.customer_name}, {transaction.vehicle_label}, {transaction.start_date} to {transaction.end_date}, PHP {transaction.amount:,.2f}"
     vehicle, label = _vehicle_label(db, data)
-    assert_vehicle_free(db, vehicle.id if vehicle else None, data.start_date, data.end_date, exclude_transaction=transaction.id)
     _fill(transaction, data, vehicle, label)
     db.commit()
     sync_rented_status(db)
@@ -118,8 +119,6 @@ def add_payment(transaction_id: str, data: ExtensionIn, admin: Profile = Depends
     new_end = data.new_end_date or transaction.end_date
     if new_end < transaction.end_date:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, f"The new return date can't be before the current one ({transaction.end_date}).")
-    if new_end > transaction.end_date:
-        assert_vehicle_free(db, transaction.vehicle_id, transaction.start_date, new_end, exclude_transaction=transaction.id)
     extension = TransactionExtension(
         previous_end_date=transaction.end_date,
         new_end_date=new_end,
