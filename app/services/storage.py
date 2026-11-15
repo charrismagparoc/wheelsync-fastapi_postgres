@@ -69,6 +69,14 @@ def read_file(bucket: str, relative: str) -> tuple[bytes, str] | None:
     return None
 
 
+def put_file(bucket: str, relative: str, data: bytes, content_type: str) -> None:
+    """Save a file in the database, replacing any earlier version with the same name."""
+    safe_path(bucket, relative)  # same path rules as every other file
+    with engine.begin() as conn:
+        conn.execute(delete(StoredFile).where(StoredFile.bucket == bucket, StoredFile.path == relative))
+        conn.execute(insert(StoredFile).values(bucket=bucket, path=relative, content_type=content_type, data=data))
+
+
 def file_exists(bucket: str, relative: str) -> bool:
     target = safe_path(bucket, relative)
     with engine.connect() as conn:
