@@ -402,6 +402,7 @@ def dashboard(year: int | None = Query(default=None, ge=2000, le=2100), db: Sess
         "total": revenue_since(),
     }
 
+    # Rentals per month: only bookings. Transactions are payment records, so they are not counted as rentals.
     month_expr = extract("month", Booking.start_date)
     per_month = dict(
         db.execute(
@@ -414,18 +415,7 @@ def dashboard(year: int | None = Query(default=None, ge=2000, le=2100), db: Sess
             .group_by(month_expr)
         ).all()
     )
-    walk_in_month = extract("month", WalkInTransaction.start_date)
-    walk_ins_per_month = dict(
-        db.execute(
-            select(walk_in_month, func.count())
-            .where(extract("year", WalkInTransaction.start_date) == year)
-            .group_by(walk_in_month)
-        ).all()
-    )
-    monthly = [
-        {"month": m, "count": int(per_month.get(m, 0)) + int(walk_ins_per_month.get(m, 0))}
-        for m in range(1, 13)
-    ]
+    monthly = [{"month": m, "count": int(per_month.get(m, 0))} for m in range(1, 13)]
 
     recent_rows = db.scalars(booking_svc.booking_query().where(real).order_by(Booking.created_at.desc()).limit(6)).all()
     recent = [
