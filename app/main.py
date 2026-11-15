@@ -13,7 +13,7 @@ from .config import DEFAULT_JWT_SECRET, get_settings
 from .database import SessionLocal, get_db, init_db
 from .models import Profile, UserRole
 from .realtime import hub
-from .routers import admin, auth, bookings, duplicates, files, locations, me, notifications, public, transactions, vehicles
+from .routers import admin, auth, bookings, cancellations, duplicates, files, locations, me, notifications, public, transactions, vehicles
 from .security import decode_access_token
 
 log = logging.getLogger("wheelsync")
@@ -73,7 +73,7 @@ app.add_middleware(
 
 for r in (
     auth.router, me.router, public.router, vehicles.router, bookings.router, notifications.router, admin.router,
-    duplicates.router, files.router, locations.router, transactions.router,
+    duplicates.router, cancellations.router, files.router, locations.router, transactions.router,
 ):
     app.include_router(r)
 
