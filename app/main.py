@@ -49,7 +49,10 @@ async def lifespan(_: FastAPI):
         raise RuntimeError("Refusing to start in production with the default JWT_SECRET. Set a long random value.")
     if s.jwt_secret == DEFAULT_JWT_SECRET:
         log.warning("Using the default JWT_SECRET - fine for local development only.")
-    init_db()
+    try:
+        init_db()
+    except Exception:  # a failed schema check must not take the whole API down; the real error is in the logs
+        log.exception("init_db failed; continuing so the API can still answer requests")
     hub.bind_loop(asyncio.get_running_loop())
     reminders = asyncio.create_task(_reminder_loop(s.reminder_interval_seconds)) if s.reminder_interval_seconds > 0 else None
     yield
