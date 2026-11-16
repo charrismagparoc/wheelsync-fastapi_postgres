@@ -29,10 +29,14 @@ def init_db() -> None:
     """Create extensions + tables. Safe to run on every start."""
     from . import models  # noqa: F401  (register tables)
 
+    # On Vercel every cold instance runs this at the same moment. Without a lock, two instances race on
+    # CREATE EXTENSION / CREATE TABLE / ALTER TABLE and one crashes ("duplicate key ... pg_extension_name_index"),
+    # which shows up as 500 FUNCTION_INVOCATION_FAILED. A transaction-level advisory lock makes them take turns
+    # (it is released on commit, so it is also safe behind Neon's pgbouncer pooler).
     with engine.begin() as conn:
+        conn.exec_driver_sql("SELECT pg_advisory_xact_lock(727401)")
         conn.exec_driver_sql("CREATE EXTENSION IF NOT EXISTS btree_gist")
-    Base.metadata.create_all(engine)
-    with engine.begin() as conn:
+        Base.metadata.create_all(conn)
         conn.exec_driver_sql("ALTER TABLE profiles ADD COLUMN IF NOT EXISTS address text")
         conn.exec_driver_sql("ALTER TABLE profiles ADD COLUMN IF NOT EXISTS email_verified boolean NOT NULL DEFAULT true")
         conn.exec_driver_sql("ALTER TABLE profiles ADD COLUMN IF NOT EXISTS email_verification_token_hash varchar(64)")
